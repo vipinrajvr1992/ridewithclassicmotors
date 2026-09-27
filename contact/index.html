@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 
 <html lang="en-IN">
 <head>
@@ -604,6 +603,206 @@
   text-decoration-line:none !important;
 }
 </style>
+
+<style id="contact-card-icon-alignment-final-v5">
+/* =========================================================
+   CONTACT PAGE — SMALL ICON ALIGNMENT POLISH
+   Requested changes only:
+   - Align contact-detail / phone icons cleanly
+   - Keep icon/text baselines consistent
+   - Make LOCATION title line yellow
+   - Preserve all existing content, footer and functions
+   ========================================================= */
+
+/* Contact-card phone number: icon and number share one clean baseline. */
+.contact-page .contact-primary-number{
+  width:100%;
+}
+.contact-page .contact-primary-number a{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  vertical-align:middle;
+}
+.contact-page .contact-primary-number a i{
+  flex:0 0 20px;
+  width:20px;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  line-height:1 !important;
+  margin:0 !important;
+}
+
+/* Secondary contact details: fixed icon column, centered icon, clean text baseline. */
+.contact-page .contact-card-detail{
+  grid-template-columns:21px minmax(0,1fr) !important;
+  align-items:center !important;
+}
+.contact-page .contact-card-detail > i{
+  width:21px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  line-height:1 !important;
+  margin:0 !important;
+}
+.contact-page .contact-card-detail a,
+.contact-page .contact-card-detail span{
+  display:block;
+  line-height:1.45 !important;
+}
+
+/* Button icons: consistent optical alignment with button labels. */
+.contact-page .contact-card-actions .btn,
+.contact-page .contact-hero .btn,
+.contact-page .location-box .btn{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:9px !important;
+}
+.contact-page .contact-card-actions .btn > i,
+.contact-page .contact-hero .btn > i,
+.contact-page .location-box .btn > i{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  line-height:1 !important;
+  flex:0 0 auto;
+}
+
+/* Requested: the location heading is yellow. */
+.contact-page .location-box h3{
+  color:var(--yellow-soft) !important;
+}
+.contact-page .location-box h3 span{
+  color:var(--yellow-soft) !important;
+}
+
+/* Keep the location action icon optically centered. */
+.contact-page .location-box .btn > i{
+  min-width:16px;
+}
+
+/* Reduced-motion support. */
+@media(prefers-reduced-motion:reduce){
+  .contact-page .contact-primary-number a,
+  .contact-page .contact-card-actions .btn,
+  .contact-page .contact-hero .btn,
+  .contact-page .location-box .btn{
+    transition:none !important;
+  }
+}
+</style>
+
+
+<style id="contact-location-business-links-v6">
+/* CONTACT PAGE — separate location links for separate business listings. */
+
+.contact-page .rider-location-link{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  width:100%;
+  margin:2px 0 16px;
+  padding:0;
+}
+.contact-page .rider-location-link i{
+  flex:0 0 21px;
+  width:21px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--red) !important;
+  font-size:14px;
+  line-height:1;
+}
+.contact-page .rider-location-link a{
+  color:#d0d0d0 !important;
+  font-size:11px;
+  line-height:1.45;
+  text-decoration:none !important;
+  border:0 !important;
+  box-shadow:none !important;
+  transition:color .22s ease;
+}
+.contact-page .rider-location-link a:hover,
+.contact-page .rider-location-link a:focus-visible{
+  color:var(--red) !important;
+  text-decoration:none !important;
+}
+
+.contact-page .location-box{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+  gap:1px !important;
+  padding:0 !important;
+  overflow:hidden;
+}
+.contact-page .location-box > .location-business{
+  min-width:0;
+  padding:34px 36px;
+  background:#0e0e0e;
+}
+.contact-page .location-box > .location-business + .location-business{
+  border-left:1px solid var(--border);
+}
+.contact-page .location-business .section-kicker{
+  display:block;
+  margin-bottom:10px;
+}
+.contact-page .location-business h3{
+  margin:0 0 12px !important;
+  color:var(--yellow-soft) !important;
+}
+.contact-page .location-business p{
+  margin:0 0 8px;
+  color:#aaa;
+  font-size:13px;
+  line-height:1.8;
+}
+.contact-page .location-business .location-note{
+  margin-top:12px;
+  color:#777;
+  font-size:10px;
+  line-height:1.6;
+}
+.contact-page .location-business .location-action{
+  margin-top:22px;
+}
+.contact-page .location-business .location-action .btn{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:9px !important;
+}
+.contact-page .location-business .location-action .btn i{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  line-height:1 !important;
+}
+
+@media (max-width:760px){
+  .contact-page .location-box{
+    grid-template-columns:1fr !important;
+  }
+  .contact-page .location-box > .location-business{
+    padding:28px 24px;
+  }
+  .contact-page .location-box > .location-business + .location-business{
+    border-left:0;
+    border-top:1px solid var(--border);
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .contact-page .rider-location-link a{
+    transition:none !important;
+  }
+}
+</style>
+
 </head>
 <body class="contact-page">
 <header>
@@ -705,6 +904,10 @@
 <i aria-hidden="true" class="fa-solid fa-calendar-check"></i>
 <span>Room bookings &amp; availability</span>
 </div>
+<div class="rider-location-link">
+<i aria-hidden="true" class="fa-solid fa-location-dot"></i>
+<a href="https://maps.app.goo.gl/7V4cPJFKAEx7hk9eA" target="_blank" rel="noopener noreferrer">Rider's Den location</a>
+</div>
 <div class="hero-btns contact-card-actions">
 <a class="btn primary-btn" href="https://wa.me/919449150965" rel="noopener noreferrer" target="_blank">
 <i class="fa-brands fa-whatsapp"></i> WHATSAPP
@@ -720,24 +923,39 @@
 <section class="contact-section">
 <div class="container">
 <div class="location-box reveal">
-<div>
-<span class="section-kicker">FIND US IN WAYANAD</span>
-<h3>
-                        CLASSIC MOTORS
-                        <span>·</span>
-                        RIDER'S DEN
-                    </h3>
+<div class="location-business">
+<span class="section-kicker">CLASSIC MOTORS · WORKSHOP</span>
+<h3>CLASSIC MOTORS</h3>
 <p>
                         Near Valliyurkav Temple<br/>
                         Mananthavady<br/>
                         Wayanad, Kerala – 670645
                     </p>
-<p>Use the location link for navigation.</p>
-</div>
-<a class="btn primary-btn" href="https://maps.app.goo.gl/4pt8aXyMuhEX4kwv8" rel="noopener noreferrer" target="_blank">
+<p class="location-note">Workshop location · separate Google Business listing</p>
+<div class="location-action">
+<a class="btn primary-btn" href="https://maps.app.goo.gl/4QVEbER2AgL2q5K47" rel="noopener noreferrer" target="_blank">
 <i class="fa-solid fa-location-arrow"></i>
-                    GET DIRECTIONS
-                </a>
+                        GET WORKSHOP DIRECTIONS
+                    </a>
+</div>
+</div>
+
+<div class="location-business">
+<span class="section-kicker">RIDER'S DEN · STAY</span>
+<h3>RIDER'S DEN</h3>
+<p>
+                        Near Valliyurkav Temple<br/>
+                        Mananthavady<br/>
+                        Wayanad, Kerala – 670645
+                    </p>
+<p class="location-note">Accommodation location · separate Google Business listing</p>
+<div class="location-action">
+<a class="btn primary-btn" href="https://maps.app.goo.gl/7V4cPJFKAEx7hk9eA" rel="noopener noreferrer" target="_blank">
+<i class="fa-solid fa-location-arrow"></i>
+                        GET RIDER'S DEN DIRECTIONS
+                    </a>
+</div>
+</div>
 </div>
 </div>
 </section><section class="service-request-section" id="service-request">
@@ -989,7 +1207,7 @@
 <a aria-label="Call Classic Motors" href="tel:+919447433965">
 <i class="fa-solid fa-phone"></i>
 </a>
-<a aria-label="Classic Motors location" href="https://maps.app.goo.gl/4pt8aXyMuhEX4kwv8" rel="noopener noreferrer" target="_blank">
+<a aria-label="Classic Motors location" href="https://maps.app.goo.gl/4QVEbER2AgL2q5K47" rel="noopener noreferrer" target="_blank">
 <i class="fa-solid fa-location-dot"></i>
 </a>
 <a aria-label="Email Classic Motors" href="mailto:classicmotorsre@gmail.com">
@@ -1032,7 +1250,7 @@
 <i class="fa-brands fa-whatsapp"></i>
 <span>WHATSAPP</span>
 </a>
-<a aria-label="Classic Motors location" href="https://maps.app.goo.gl/4pt8aXyMuhEX4kwv8" rel="noopener noreferrer" target="_blank">
+<a aria-label="Classic Motors location" href="https://maps.app.goo.gl/4QVEbER2AgL2q5K47" rel="noopener noreferrer" target="_blank">
 <i class="fa-solid fa-location-arrow"></i>
 <span>MAP</span>
 </a>
