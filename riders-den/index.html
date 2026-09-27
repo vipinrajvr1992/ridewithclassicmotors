@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en-IN">
 <head>
@@ -36,11 +37,11 @@
 <!-- =====================================================
          FONT AWESOME
     ====================================================== -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
 <!-- =====================================================
          MASTER CSS
     ====================================================== -->
-<link href="../style.css" rel="stylesheet"/>
+<link href="../style.css" rel="stylesheet">
 <!-- =====================================================
          HOTEL / LODGING BUSINESS SCHEMA
     ====================================================== -->
@@ -107,8 +108,583 @@
     }
 
     </script>
-</head>
-<body>
+</link>
+<style id="riders-den-page-final-v2">
+/* =========================================================
+   CLASSIC MOTORS — RIDER'S DEN FINAL V2
+   Purpose:
+   - remove empty photo placeholders until real photos exist
+   - align room cards and all sections professionally
+   - keep booking actions clear and consistent
+   - use the Home master footer without page-specific variation
+   - no unnecessary content animation
+   ========================================================= */
+
+.riders-den-page{overflow-x:hidden}
+.riders-den-page main{overflow:hidden}
+.riders-den-page .container{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
+.riders-den-page .reveal{opacity:1!important;transform:none!important;transition:none!important}
+
+.riders-den-page .page-header{
+  min-height:calc(100svh - var(--header));
+  display:flex;
+  align-items:center;
+  padding:108px 0 92px;
+  border-bottom:1px solid #282828;
+}
+.riders-den-page .page-header .page-header-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.18fr) minmax(280px,.62fr);
+  gap:70px;
+  align-items:center;
+}
+.riders-den-page .page-header-grid > div:first-child{max-width:820px}
+.riders-den-page .page-header h2{
+  margin:0 0 24px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(64px,8vw,112px)!important;
+  font-weight:800;
+  line-height:.88;
+  letter-spacing:.2px;
+  text-transform:uppercase;
+}
+.riders-den-page .page-header h2 span{color:#d71920!important}
+.riders-den-page .page-header-grid > div:first-child > p{
+  max-width:700px;margin:0;color:#c4c4c4;font-size:17px;line-height:1.8;
+}
+.riders-den-page .page-header-meta{
+  min-height:260px;padding:34px;border:1px solid #282828;
+  display:flex;flex-direction:column;align-items:flex-end;justify-content:center;
+  text-align:right;background:linear-gradient(180deg,#111,#0d0d0d);
+}
+.riders-den-page .page-header-meta span{color:#777!important;font-size:9px!important;font-weight:800;letter-spacing:1.7px}
+.riders-den-page .page-header-meta strong{
+  margin:8px 0 4px;color:#fff!important;font-family:'Barlow Condensed',sans-serif;
+  font-size:86px!important;line-height:.82;font-weight:900;letter-spacing:2px;
+}
+.riders-den-page .page-header-meta small{color:#efb43c!important;font-size:9px!important;font-weight:800;letter-spacing:1.6px}
+
+.riders-den-page .story-section{padding:105px 0}
+.riders-den-page .story-section > .container > .story-content{
+  display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);
+  gap:68px;align-items:center;
+}
+.riders-den-page .story-section .story-content > div{max-width:800px}
+.riders-den-page .story-section .story-content > div > h3{margin:9px 0 25px}
+.riders-den-page .story-section .story-content > div > p{max-width:760px;margin:0 0 18px;color:#bdbdbd;font-size:16px;line-height:1.9}
+.riders-den-page .story-highlight{
+  align-self:stretch;min-height:255px;padding:36px;border:1px solid #282828;
+  background:linear-gradient(180deg,#111,#0d0d0d);
+  display:flex;align-items:center;
+}
+.riders-den-page .story-highlight-inner{width:100%}
+.riders-den-page .story-highlight .story-label{
+  display:block;margin-bottom:18px;color:#efb43c;font-size:8px;font-weight:800;letter-spacing:1.6px;
+}
+.riders-den-page .story-highlight p{margin:0;color:#eee;font-size:18px;line-height:1.75}
+
+.riders-den-page .highlights{padding:105px 0}
+.riders-den-page .section-title{max-width:850px}
+.riders-den-page .section-title .section-kicker{display:block;margin-bottom:8px}
+.riders-den-page .section-title h3{margin:0 0 15px;line-height:.95}
+.riders-den-page .section-title p{max-width:760px}
+
+.riders-den-page .grid-cards{align-items:stretch}
+.riders-den-page .highlights:not(#rooms) .grid-cards{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  margin-top:42px;
+}
+.riders-den-page .highlights:not(#rooms) .card{
+  min-height:205px;display:flex!important;flex-direction:column;align-items:flex-start;justify-content:flex-start;
+}
+.riders-den-page .highlights .card > i{
+  width:auto!important;min-width:0!important;height:auto!important;min-height:0!important;
+  margin:0 0 22px!important;padding:0!important;display:block!important;
+  border:0!important;background:transparent!important;box-shadow:none!important;
+  color:#efb43c!important;font-size:29px!important;line-height:1!important;
+  transform:none!important;filter:none!important;transition:none!important;
+}
+.riders-den-page .highlights .card h4{margin:0 0 12px!important}
+.riders-den-page .highlights .card p{margin:0!important}
+
+.riders-den-page #rooms{padding-top:110px;border-top:1px solid #282828}
+.riders-den-page #rooms .section-title{max-width:900px}
+.riders-den-page .room-card{
+  display:grid!important;
+  grid-template-columns:minmax(250px,.52fr) minmax(0,1.48fr)!important;
+  gap:0!important;
+  margin-top:24px!important;
+  border:1px solid #282828!important;
+  background:linear-gradient(180deg,#111,#0d0d0d)!important;
+  overflow:hidden!important;
+}
+.riders-den-page #rooms > .container > .room-card:first-of-type{margin-top:42px!important}
+
+.riders-den-page .room-gallery{display:none!important}
+
+.riders-den-page .room-content{
+  grid-column:1 / -1!important;
+  display:grid!important;
+  grid-template-columns:minmax(220px,.52fr) minmax(0,1.48fr)!important;
+  gap:0!important;
+  min-width:0;
+}
+.riders-den-page .room-heading{
+  padding:38px 34px!important;
+  border-right:1px solid #282828;
+  display:flex!important;align-items:flex-start!important;
+  background:rgba(255,255,255,.015);
+}
+.riders-den-page .room-heading .section-kicker{margin-bottom:10px}
+.riders-den-page .room-heading h3{
+  margin:0!important;font-family:'Barlow Condensed',sans-serif;
+  font-size:52px!important;font-weight:900;line-height:.9!important;
+  text-transform:uppercase;
+}
+.riders-den-page .room-description{
+  grid-column:2!important;
+  padding:38px 38px 18px!important;
+  margin:0!important;color:#a7a7a7!important;font-size:14px!important;line-height:1.8!important;
+  max-width:760px!important;
+}
+.riders-den-page .room-specs{
+  grid-column:2!important;
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:16px!important;
+  padding:0 38px 24px!important;
+  align-items:start!important;
+}
+.riders-den-page .room-specs > div{
+  display:flex!important;align-items:center!important;gap:9px!important;
+  min-width:0!important;
+}
+.riders-den-page .room-specs i{color:#efb43c!important;font-size:15px!important;flex:0 0 auto}
+.riders-den-page .room-specs span{color:#d2d2d2!important;font-size:12px!important;line-height:1.45}
+.riders-den-page .room-booking{
+  grid-column:2!important;
+  padding:16px 38px 34px!important;
+  border-top:1px solid #282828;
+}
+.riders-den-page .room-booking h4{
+  margin:0 0 14px!important;font-family:'Barlow Condensed',sans-serif;
+  font-size:22px!important;font-weight:800!important;letter-spacing:.5px!important;
+}
+.riders-den-page .direct-booking{
+  display:flex!important;gap:10px!important;flex-wrap:wrap!important;
+}
+.riders-den-page .room-book-btn{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  gap:8px!important;min-height:42px!important;padding:10px 16px!important;
+  text-decoration:none!important;border:1px solid #343434!important;
+  background:#0e0e0e!important;color:#fff!important;font-family:'Barlow Condensed',sans-serif;
+  font-size:14px!important;font-weight:800!important;letter-spacing:.5px!important;text-transform:uppercase;
+}
+.riders-den-page .room-book-btn.whatsapp-btn i{color:#25d366}
+.riders-den-page .room-book-btn.call-btn i{color:#efb43c}
+.riders-den-page .room-book-btn:hover{border-color:#555!important;transform:none!important}
+
+.riders-den-page .online-booking{margin-top:22px!important}
+.riders-den-page .online-booking > span{
+  display:block!important;margin-bottom:8px!important;color:#777!important;
+  font-size:8px!important;font-weight:800!important;letter-spacing:1.5px!important;text-transform:uppercase!important;
+}
+.riders-den-page .ota-buttons{
+  display:flex!important;flex-wrap:wrap!important;gap:8px!important;
+}
+.riders-den-page .ota-btn{
+  display:inline-flex!important;align-items:center!important;gap:7px!important;
+  min-height:34px!important;padding:8px 10px!important;
+  border:1px solid #323232!important;background:#0f0f0f!important;color:#d7d7d7!important;
+  text-decoration:none!important;font-size:11px!important;
+}
+.riders-den-page .ota-btn i{color:#efb43c!important}
+.riders-den-page .ota-pending{opacity:.48;cursor:default!important}
+.riders-den-page .ota-pending:hover{border-color:#323232!important;color:#d7d7d7!important}
+
+.riders-den-page .rally-section{padding:105px 0;border-top:1px solid #282828}
+.riders-den-page .rally-content{max-width:920px;margin-inline:auto}
+.riders-den-page .rally-copy{max-width:850px}
+.riders-den-page .rally-copy h3{
+  margin:10px 0 20px!important;font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(46px,6vw,76px)!important;font-weight:800!important;line-height:.92!important;
+}
+.riders-den-page .rally-copy h3 span{color:#d71920!important}
+.riders-den-page .rally-copy p{max-width:820px;color:#aaa!important;font-size:16px!important;line-height:1.9}
+
+.riders-den-page .contact-section{padding:105px 0;border-top:1px solid #282828}
+.riders-den-page .contact-section .contact-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch;margin-top:40px;
+}
+.riders-den-page .contact-section .contact-card{
+  border:1px solid #282828;background:linear-gradient(180deg,#111,#0d0d0d);
+  padding:34px;min-height:210px;
+}
+.riders-den-page .contact-section .contact-card h4{
+  margin:0 0 10px!important;font-family:'Barlow Condensed',sans-serif;
+  font-size:27px!important;font-weight:800;text-transform:uppercase;
+}
+.riders-den-page .contact-section .contact-card p{margin:0;color:#aaa;line-height:1.8;font-size:14px}
+.riders-den-page .contact-section a{color:#fff;text-decoration:none}
+.riders-den-page .contact-section a:hover{color:#d71920}
+
+.riders-den-page .final-cta{padding:105px 0 115px}
+.riders-den-page .final-cta h3{line-height:.96}
+.riders-den-page .final-cta h3 span{color:#d71920}
+
+.riders-den-page footer .footer-social{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:22px!important}
+.riders-den-page footer .footer-social a{color:#fff!important}
+
+@media(max-width:1100px){
+  .riders-den-page .page-header .page-header-grid{grid-template-columns:1fr;gap:42px}
+  .riders-den-page .page-header-meta{min-height:0;width:min(100%,520px);align-items:flex-start;text-align:left}
+  .riders-den-page .highlights:not(#rooms) .grid-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .riders-den-page .room-card{grid-template-columns:1fr!important}
+  .riders-den-page .room-content{grid-template-columns:1fr!important}
+  .riders-den-page .room-heading{border-right:0;border-bottom:1px solid #282828}
+  .riders-den-page .room-description,.riders-den-page .room-specs,.riders-den-page .room-booking{grid-column:1!important}
+  .riders-den-page .contact-section .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .riders-den-page .page-header{min-height:auto;padding:84px 0 72px}
+  .riders-den-page .page-header h2{font-size:clamp(54px,15vw,82px)!important}
+  .riders-den-page .story-section,.riders-den-page .highlights,.riders-den-page #rooms,.riders-den-page .rally-section,.riders-den-page .contact-section{padding:78px 0}
+  .riders-den-page .story-section > .container > .story-content{grid-template-columns:1fr;gap:42px}
+  .riders-den-page .highlights:not(#rooms) .grid-cards{grid-template-columns:1fr}
+  .riders-den-page .room-heading{padding:28px 24px!important}
+  .riders-den-page .room-heading h3{font-size:44px!important}
+  .riders-den-page .room-description{padding:24px 24px 16px!important;font-size:13px!important}
+  .riders-den-page .room-specs{grid-template-columns:1fr 1fr!important;padding:0 24px 22px!important}
+  .riders-den-page .room-booking{padding:16px 24px 26px!important}
+  .riders-den-page .contact-section .contact-card{padding:28px 24px;min-height:0}
+  .riders-den-page .footer-social{justify-content:flex-start!important;gap:19px!important}
+}
+</style>
+<style id="riders-den-home-footer-social">
+.footer-social{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:20px;
+}
+
+.footer-social a{
+  width:auto !important;
+  min-width:0 !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 !important;
+  padding:5px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  border:0 !important;
+  border-width:0 !important;
+  border-style:none !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+
+  color:rgba(255,255,255,.84) !important;
+  text-decoration:none !important;
+  cursor:pointer !important;
+
+  transition:
+    transform .28s cubic-bezier(.22,.61,.36,1),
+    color .24s ease,
+    filter .24s ease !important;
+}
+
+.footer-social a i{
+  margin:0 !important;
+  padding:0 !important;
+  font-size:18px;
+  line-height:1;
+  display:block;
+  transform-origin:center;
+  transition:
+    transform .28s cubic-bezier(.22,.61,.36,1),
+    color .24s ease,
+    filter .24s ease !important;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible{
+  transform:translateY(-4px) scale(1.06) !important;
+  border:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  outline:none;
+}
+
+.footer-social a:hover i,
+.footer-social a:focus-visible i{
+  transform:scale(1.18) rotate(-5deg);
+  filter:drop-shadow(0 5px 10px rgba(0,0,0,.35));
+}
+
+.footer-social a:nth-child(1):hover i,
+.footer-social a:nth-child(1):focus-visible i{
+  color:#e1306c !important;
+}
+
+.footer-social a:nth-child(2):hover i,
+.footer-social a:nth-child(2):focus-visible i{
+  color:#25d366 !important;
+}
+
+.footer-social a:nth-child(3):hover i,
+.footer-social a:nth-child(3):focus-visible i{
+  color:#f2b632 !important;
+}
+
+.footer-social a:nth-child(4):hover i,
+.footer-social a:nth-child(4):focus-visible i{
+  color:#ef4444 !important;
+}
+
+.footer-social a:nth-child(5):hover i,
+.footer-social a:nth-child(5):focus-visible i{
+  color:#f2b632 !important;
+}
+
+.footer-social a:active{
+  transform:translateY(-1px) scale(.96) !important;
+}
+
+@media (max-width:760px){
+  .footer-social{
+    justify-content:flex-start;
+    gap:18px;
+  }
+
+  .footer-social a{
+    padding:4px !important;
+  }
+
+  .footer-social a i{
+    font-size:17px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .footer-social a,
+  .footer-social a i{
+    transition:none !important;
+  }
+}
+</style><style id="riders-den-home-footer-polish">
+/* =========================================================
+   CLASSIC MOTORS HOME — ICON / FOOTER FINAL POLISH
+   No icon boxes. Consistent icon-to-text alignment.
+   Footer icons remain white, clickable and animated.
+========================================================= */
+
+/* HOME CARDS — plain icon treatment */
+main .card{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+main .card > i{
+    width:auto !important;
+    min-width:0 !important;
+    max-width:none !important;
+    height:auto !important;
+    min-height:0 !important;
+    padding:0 !important;
+    margin:0 0 22px !important;
+
+    display:inline-block !important;
+    flex:0 0 auto !important;
+
+    border:0 !important;
+    border-width:0 !important;
+    border-style:none !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    background-color:transparent !important;
+    box-shadow:none !important;
+
+    color:var(--accent-yellow,#f2b632) !important;
+    font-size:29px !important;
+    line-height:1 !important;
+    text-align:left !important;
+    vertical-align:middle !important;
+
+    transform-origin:center;
+    transition:
+        transform .32s cubic-bezier(.22,.61,.36,1),
+        color .25s ease,
+        filter .25s ease !important;
+}
+
+main .card > h4{
+    margin-top:0 !important;
+    margin-bottom:12px !important;
+    align-self:flex-start;
+}
+
+main .card > p{
+    margin-top:0 !important;
+}
+
+/* Card hover: keep the existing premium lift, animate only the icon too. */
+main .card:hover > i{
+    transform:translateY(-3px) scale(1.13) rotate(-4deg) !important;
+    color:var(--accent-red,#dc2626) !important;
+    filter:drop-shadow(0 6px 12px rgba(220,38,38,.22));
+}
+
+/* FOOTER — same structure/alignment as About page, but no icon boxes */
+footer .footer-social{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:22px !important;
+}
+
+footer .footer-social a{
+    width:auto !important;
+    min-width:0 !important;
+    height:auto !important;
+    min-height:0 !important;
+
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    margin:0 !important;
+    padding:4px !important;
+
+    border:0 !important;
+    border-width:0 !important;
+    border-style:none !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+
+    color:#ffffff !important;
+    text-decoration:none !important;
+    cursor:pointer !important;
+
+    transition:
+        transform .30s cubic-bezier(.22,.61,.36,1),
+        color .25s ease,
+        filter .25s ease !important;
+}
+
+footer .footer-social a i{
+    display:block !important;
+    width:auto !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    color:inherit !important;
+    font-size:19px !important;
+    line-height:1 !important;
+
+    transform-origin:center;
+    transition:
+        transform .30s cubic-bezier(.22,.61,.36,1),
+        color .25s ease,
+        filter .25s ease !important;
+}
+
+/* Individual interactive colors */
+footer .footer-social a:nth-child(1):hover,
+footer .footer-social a:nth-child(1):focus-visible{
+    color:#e1306c !important;
+}
+footer .footer-social a:nth-child(2):hover,
+footer .footer-social a:nth-child(2):focus-visible{
+    color:#25d366 !important;
+}
+footer .footer-social a:nth-child(3):hover,
+footer .footer-social a:nth-child(3):focus-visible{
+    color:#f2b632 !important;
+}
+footer .footer-social a:nth-child(4):hover,
+footer .footer-social a:nth-child(4):focus-visible{
+    color:#ef4444 !important;
+}
+footer .footer-social a:nth-child(5):hover,
+footer .footer-social a:nth-child(5):focus-visible{
+    color:#f2b632 !important;
+}
+
+footer .footer-social a:hover,
+footer .footer-social a:focus-visible{
+    transform:translateY(-4px) scale(1.06) !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    outline:none;
+}
+
+footer .footer-social a:hover i,
+footer .footer-social a:focus-visible i{
+    transform:scale(1.18) rotate(-5deg);
+    filter:drop-shadow(0 5px 10px rgba(0,0,0,.35));
+}
+
+footer .footer-social a:active{
+    transform:translateY(-1px) scale(.96) !important;
+}
+
+/* Make the clickable targets obvious without bringing back visible boxes. */
+footer .footer-social a{
+    position:relative;
+}
+footer .footer-social a::after{
+    content:"";
+    position:absolute;
+    inset:-5px;
+    border-radius:50%;
+    border:1px solid transparent;
+    transition:border-color .25s ease, transform .25s ease;
+}
+footer .footer-social a:hover::after,
+footer .footer-social a:focus-visible::after{
+    border-color:rgba(255,255,255,.16);
+    transform:scale(1.08);
+}
+
+/* Mobile footer spacing */
+@media (max-width:760px){
+    main .card > i{
+        font-size:27px !important;
+        margin-bottom:20px !important;
+    }
+
+    footer .footer-social{
+        justify-content:flex-start !important;
+        gap:19px !important;
+    }
+
+    footer .footer-social a{
+        padding:4px !important;
+    }
+
+    footer .footer-social a i{
+        font-size:18px !important;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+    main .card > i,
+    footer .footer-social a,
+    footer .footer-social a i,
+    footer .footer-social a::after{
+        transition:none !important;
+    }
+}
+</style></head>
+<body class="riders-den-page">
 <!-- =========================================================
      HEADER
 ========================================================== -->
@@ -154,7 +730,7 @@
 </ul>
 </nav>
 <a class="cta-btn header-call-btn" href="tel:+919449150965">
-    <i class="fa-solid fa-phone"></i>
+<i class="fa-solid fa-phone"></i>
     CALL RIDER'S DEN
   </a>
 <button aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-btn" type="button">
@@ -177,9 +753,9 @@
 <p>Rider's Den is a motorcycle-inspired stay in Mananthavady, Wayanad — built around the rhythm of the road.</p>
 </div>
 <div class="page-header-meta rider-den-meta">
-  <span>RIDER'S DEN</span>
-  <strong>STAY</strong>
-  <small>RIDE • REST • EXPLORE</small>
+<span>RIDER'S DEN</span>
+<strong>STAY</strong>
+<small>RIDE • REST • EXPLORE</small>
 </div>
 </div>
 </div>
@@ -238,7 +814,6 @@
 </div>
 <div class="story-highlight">
 <div class="story-highlight-inner">
-
 <span class="story-label">
                         ROOM TYPES
                     </span>
@@ -299,7 +874,7 @@
 </article>
 <article class="card">
 <i class="fa-solid fa-hand-sparkles"></i>
-<h4>Hygiene & Care</h4>
+<h4>Hygiene &amp; Care</h4>
 <p>Clean, well-maintained accommodation with attention to guest comfort and room hygiene.</p>
 </article>
 </div>
@@ -324,41 +899,9 @@
              CLASSIC
         ================================================== -->
 <article class="room-card" itemscope="" itemtype="https://schema.org/HotelRoom">
-<div class="room-gallery">
-<div class="room-main-image">
-<div class="room-image-placeholder">
-<i class="fa-solid fa-image"></i>
-<span>
-                            CLASSIC ROOM PHOTO
-                        </span>
-<small>
-                            Photo coming soon
-                        </small>
-</div>
-<!--
-                    FUTURE IMAGE:
 
-                    <img
-                        src="images/riders-den/classic-01.webp"
-                        alt="Classic Room at Rider's Den Mananthavady"
-                        loading="lazy">
-                    -->
-</div>
-<div class="room-thumbnails">
-<button aria-label="Classic Room photo 1" type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-<button aria-label="Classic Room photo 2" type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-<button aria-label="Classic Room photo 3" type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-</div>
-</div>
 <div class="room-content">
 <div class="room-heading">
-
 <div>
 <span class="section-kicker">
                             RIDER'S DEN
@@ -419,17 +962,17 @@
 
                                 MakeMyTrip
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 <a aria-disabled="true" aria-label="Agoda booking link will be added" class="ota-btn ota-pending" data-booking="pending" href="javascript:void(0)">
 
                                 Agoda
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 <a aria-disabled="true" aria-label="Booking.com link will be added" class="ota-btn ota-pending" data-booking="pending" href="javascript:void(0)">
 
                                 Booking.com
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -439,33 +982,9 @@
              HIMALAYAN
         ================================================== -->
 <article class="room-card" itemscope="" itemtype="https://schema.org/HotelRoom">
-<div class="room-gallery">
-<div class="room-main-image">
-<div class="room-image-placeholder">
-<i class="fa-solid fa-image"></i>
-<span>
-                            HIMALAYAN ROOM PHOTO
-                        </span>
-<small>
-                            Photo coming soon
-                        </small>
-</div>
-</div>
-<div class="room-thumbnails">
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-</div>
-</div>
+
 <div class="room-content">
 <div class="room-heading">
-
 <div>
 <span class="section-kicker">
                             RIDER'S DEN
@@ -525,17 +1044,17 @@
 
                                 MakeMyTrip
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 <a aria-disabled="true" class="ota-btn ota-pending" href="javascript:void(0)">
 
                                 Agoda
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 <a aria-disabled="true" class="ota-btn ota-pending" href="javascript:void(0)">
 
                                 Booking.com
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -545,33 +1064,9 @@
              HUNTER
         ================================================== -->
 <article class="room-card" itemscope="" itemtype="https://schema.org/HotelRoom">
-<div class="room-gallery">
-<div class="room-main-image">
-<div class="room-image-placeholder">
-<i class="fa-solid fa-image"></i>
-<span>
-                            HUNTER ROOM PHOTO
-                        </span>
-<small>
-                            Photo coming soon
-                        </small>
-</div>
-</div>
-<div class="room-thumbnails">
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-</div>
-</div>
+
 <div class="room-content">
 <div class="room-heading">
-
 <div>
 <span class="section-kicker">
                             RIDER'S DEN
@@ -631,17 +1126,17 @@
 
                                 MakeMyTrip
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 <a aria-disabled="true" class="ota-btn ota-pending" href="javascript:void(0)">
 
                                 Agoda
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 <a aria-disabled="true" class="ota-btn ota-pending" href="javascript:void(0)">
 
                                 Booking.com
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -651,33 +1146,9 @@
              INTERCEPTOR
         ================================================== -->
 <article class="room-card" itemscope="" itemtype="https://schema.org/HotelRoom">
-<div class="room-gallery">
-<div class="room-main-image">
-<div class="room-image-placeholder">
-<i class="fa-solid fa-image"></i>
-<span>
-                            INTERCEPTOR ROOM PHOTO
-                        </span>
-<small>
-                            Photo coming soon
-                        </small>
-</div>
-</div>
-<div class="room-thumbnails">
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-</div>
-</div>
+
 <div class="room-content">
 <div class="room-heading">
-
 <div>
 <span class="section-kicker">
                             RIDER'S DEN
@@ -743,17 +1214,17 @@
 
                                 MakeMyTrip
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 <a aria-disabled="true" class="ota-btn ota-pending" href="javascript:void(0)">
 
                                 Agoda
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 <a aria-disabled="true" class="ota-btn ota-pending" href="javascript:void(0)">
 
                                 Booking.com
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -763,33 +1234,9 @@
              SUPERMETEOR
         ================================================== -->
 <article class="room-card" itemscope="" itemtype="https://schema.org/HotelRoom">
-<div class="room-gallery">
-<div class="room-main-image">
-<div class="room-image-placeholder">
-<i class="fa-solid fa-image"></i>
-<span>
-                            SUPERMETEOR ROOM PHOTO
-                        </span>
-<small>
-                            Photo coming soon
-                        </small>
-</div>
-</div>
-<div class="room-thumbnails">
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-<button type="button">
-<i class="fa-solid fa-image"></i>
-</button>
-</div>
-</div>
+
 <div class="room-content">
 <div class="room-heading">
-
 <div>
 <span class="section-kicker">
                             RIDER'S DEN
@@ -849,17 +1296,17 @@
 
                                 MakeMyTrip
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 <a aria-disabled="true" class="ota-btn ota-pending" href="javascript:void(0)">
 
                                 Agoda
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 <a aria-disabled="true" class="ota-btn ota-pending" href="javascript:void(0)">
 
                                 Booking.com
 
-                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                             <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -897,7 +1344,7 @@
                 </p>
 </div>
 </div></div>
-</div>
+
 </section>
 <!-- =========================================================
      LOCATION
@@ -1024,12 +1471,7 @@
 
                     <i class="fa-solid fa-plus"></i>
 </summary>
-<p>
-                    Yes. Room galleries are built into this page.
-                    Original property photos can be added to each
-                    room gallery when the final photo collection
-                    is ready.
-                </p>
+<p>Room photos will be added to each room section when the final property photo collection is ready.</p>
 </details>
 </div>
 </div>
@@ -1073,110 +1515,74 @@
 <!-- =========================================================
      FOOTER
 ========================================================== -->
-
 <footer>
-    <div class="footer-inner">
-        <div class="footer-brand">
-            <div class="footer-logo">CLASSIC MOTORS</div>
-            <p>
-                Independent Royal Enfield Specialist<br>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="footer-logo">CLASSIC MOTORS</div>
+<p>
+                Independent Royal Enfield Specialist<br/>
                 Mananthavady, Wayanad, Kerala
             </p>
-        </div>
-
-        <div class="footer-social">
-            <a aria-label="Instagram" href="https://www.instagram.com/classicmotors.re/"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a aria-label="WhatsApp" href="https://wa.me/919447433965"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a aria-label="Call Classic Motors" href="tel:+919447433965">
-                <i class="fa-solid fa-phone"></i>
-            </a>
-            <a aria-label="Classic Motors location"
-               href="https://share.google/h3YDCEL6WjPwHLIgK"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-location-dot"></i>
-            </a>
-            <a aria-label="Email Classic Motors" href="mailto:classicmotorsre@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </div>
-
-        <nav aria-label="Footer Navigation" class="footer-nav">
-            <a href="../">Home</a>
-            <a href="../services/">Services</a>
-            <a href="../about/">About</a>
-            <a href="../riders-den/">Rider's Den</a>
-            <a href="../contact/">Contact</a>
-            <a href="../privacy/">Privacy</a>
-        </nav>
-
-        <div class="footer-divider"></div>
-
-        <div class="footer-bottom">
-            <p>© 2026 Classic Motors. All Rights Reserved.</p>
-            <p>
+</div>
+<div class="footer-social">
+<a aria-label="Instagram" href="https://www.instagram.com/classicmotors.re/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+<a aria-label="WhatsApp" href="https://wa.me/919447433965" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+<a aria-label="Call Classic Motors" href="tel:+919447433965">
+<i class="fa-solid fa-phone"></i>
+</a>
+<a aria-label="Classic Motors location" href="https://share.google/h3YDCEL6WjPwHLIgK" rel="noopener noreferrer" target="_blank">
+<i class="fa-solid fa-location-dot"></i>
+</a>
+<a aria-label="Email Classic Motors" href="mailto:classicmotorsre@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
+</div>
+<nav aria-label="Footer Navigation" class="footer-nav">
+<a href="/">Home</a>
+<a href="/services/">Services</a>
+<a href="/about/">About</a>
+<a href="/riders-den/">Rider's Den</a>
+<a href="/contact/">Contact</a>
+<a href="/privacy/">Privacy</a>
+</nav>
+<div class="footer-divider"></div>
+<div class="footer-bottom">
+<p>© 2026 Classic Motors. All Rights Reserved.</p>
+<p>
                 Digital Experience by
-                <a href="https://www.thegypsycartel.com"
-                   target="_blank" rel="noopener noreferrer">
+                <a href="https://www.thegypsycartel.com" rel="noopener noreferrer" target="_blank">
                     The Gypsy Cartel
                 </a>
-            </p>
-        </div>
-
-        <p class="footer-legal">
+</p>
+</div>
+<p class="footer-legal">
             Royal Enfield is a trademark of Eicher Motors Limited.
             Classic Motors is an independent motorcycle workshop.
         </p>
-    </div>
-</footer>
-
+</div>
+</footer><div class="mobile-action-bar">
+<a aria-label="Call Classic Motors" href="tel:+919447433965">
+<i class="fa-solid fa-phone"></i><span>CALL</span>
+</a>
+<a aria-label="WhatsApp Classic Motors" href="https://wa.me/919447433965" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp"></i><span>WHATSAPP</span>
+</a>
+<a aria-label="Get directions to Classic Motors" href="https://share.google/h3YDCEL6WjPwHLIgK" rel="noopener noreferrer" target="_blank">
+<i class="fa-solid fa-location-arrow"></i><span>DIRECTIONS</span>
+</a>
+</div>
 <!-- =========================================================
      MOBILE ACTION BAR
 ========================================================== -->
-<div class="mobile-action-bar">
-<a aria-label="Call Rider's Den" href="tel:+919449150965">
-<i class="fa-solid fa-phone"></i>
-<span>
-            CALL
-        </span>
-</a>
-<a aria-label="WhatsApp Rider's Den" href="https://wa.me/919449150965" rel="noopener noreferrer" target="_blank">
-<i class="fa-brands fa-whatsapp"></i>
-<span>
-            WHATSAPP
-        </span>
-</a>
-<a aria-label="Rider's Den location" href="https://share.google/h3YDCEL6WjPwHLIgK" rel="noopener noreferrer" target="_blank">
-<i class="fa-solid fa-location-arrow"></i>
-<span>
-            MAP
-        </span>
-</a>
-</div>
+
 <!-- =========================================================
      SCRIPT
 ========================================================== -->
 
-<div class="mobile-action-bar">
-    <a aria-label="Call Classic Motors" href="tel:+919447433965">
-        <i class="fa-solid fa-phone"></i><span>CALL</span>
-    </a>
-    <a aria-label="WhatsApp Classic Motors" href="https://wa.me/919447433965"
-       target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-whatsapp"></i><span>WHATSAPP</span>
-    </a>
-    <a aria-label="Classic Motors location"
-       href="https://share.google/h3YDCEL6WjPwHLIgK"
-       target="_blank" rel="noopener noreferrer">
-        <i class="fa-solid fa-location-arrow"></i><span>MAP</span>
-    </a>
-</div>
 
-<script defer src="../script.js"></script>
-</body>
+<script defer="" src="../script.js"></script></body>
 </html>
