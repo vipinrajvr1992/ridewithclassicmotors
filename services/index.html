@@ -1,243 +1,509 @@
-<!-- =====================================================
-     SERVICE REQUEST / BOOKING FORM
-====================================================== -->
-<section aria-labelledby="service-request-title" class="service-request-section editorial-service-request" id="service-request">
-<div class="container">
-<div class="service-request-header">
-<div class="badge"><i class="fa-solid fa-calendar-check"></i> SERVICE ENQUIRY</div>
-<h3 id="service-request-title">YOUR BIKE. <span>YOUR REQUEST.</span></h3>
-<p>Tell us what your motorcycle needs. Share the essentials and we'll review the enquiry before getting back to you.</p>
-</div>
-<div class="service-form-wrapper">
-<!-- LEFT INFORMATION PANEL -->
-<div class="service-form-info">
-<div class="form-info-heading">
-<span class="form-number">01</span>
-<div>
-<h4>START WITH THE BIKE</h4>
-<p>A focused service enquiry for your motorcycle.</p>
-</div>
-</div>
-<div class="form-info-list">
-<div class="form-info-item">
-<div class="form-info-icon">
-<i class="fa-solid fa-motorcycle"></i>
-</div>
-<div>
-<strong>
-                                Tell us your bike
-                            </strong>
-<span>
-                                Model, year and basic details.
-                            </span>
-</div>
-</div>
-<div class="form-info-item">
-<div class="form-info-icon">
-<i class="fa-solid fa-screwdriver-wrench"></i>
-</div>
-<div>
-<strong>
-                                Select your service
-                            </strong>
-<span>
-                                Service, tuning, restoration or touring.
-                            </span>
-</div>
-</div>
-<div class="form-info-item">
-<div class="form-info-icon">
-<i class="fa-regular fa-calendar"></i>
-</div>
-<div>
-<strong>
-                                Preferred date
-                            </strong>
-<span>
-                                Let us know when you would like to visit.
-                            </span>
-</div>
-</div>
-<div class="form-info-item">
-<div class="form-info-icon">
-<i class="fa-brands fa-whatsapp"></i>
-</div>
-<div>
-<strong>
-                                Quick response
-                            </strong>
-<span>
-                                Your enquiry can be sent directly to WhatsApp.
-                            </span>
-</div>
-</div>
-</div>
-<div class="form-direct-contact">
-<span>Prefer a direct conversation?</span>
-<a href="tel:+919447433965">
-<i class="fa-solid fa-phone"></i>
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="color-scheme" content="dark">
 
-                        +91 94474 33965
+<title>Royal Enfield Motorcycle Services | Classic Motors Mananthavady</title>
+<meta name="description" content="Explore Classic Motors motorcycle services in Mananthavady, Wayanad — general service, engine tuning, diagnostics, restoration, rally preparation and long-ride checks.">
+<meta name="keywords" content="Royal Enfield service Mananthavady, Bullet service Wayanad, motorcycle mechanic Mananthavady, Royal Enfield tuning Wayanad, bike restoration Wayanad">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://ridewithclassicmotors.online/services/">
 
-                    </a>
-</div>
-</div>
-<!-- FORM -->
-<div class="service-form-card">
-<form aria-label="Classic Motors service enquiry form" id="serviceRequestForm" novalidate="">
-<div class="form-section-label">
-<span>RIDER DETAILS</span>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label for="customerName">
-                                Your Name
-                                <span>*</span>
-</label>
-<input autocomplete="name" id="customerName" name="customerName" placeholder="Enter your name" required="" type="text"/>
-</div>
-<div class="form-group">
-<label for="customerPhone">
-                                Phone / WhatsApp
-                                <span>*</span>
-</label>
-<input autocomplete="tel" id="customerPhone" inputmode="tel" name="customerPhone" placeholder="e.g. 9447433965" required="" type="tel"/>
-</div>
-</div>
-<div class="form-group">
-<label for="customerEmail">
-                            Email Address
-                            <small>
-                                Optional
-                            </small>
-</label>
-<input autocomplete="email" id="customerEmail" name="customerEmail" placeholder="yourname@example.com" type="email"/>
-</div>
-<div class="form-section-label form-section-spacer">
-<span>MOTORCYCLE DETAILS</span>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label for="bikeModel">
-                                Motorcycle Model
-                                <span>*</span>
-</label>
-<input id="bikeModel" name="bikeModel" placeholder="e.g. Classic 350" required="" type="text"/>
-</div>
-<div class="form-group">
-<label for="bikeYear">
-                                Model Year
-                                <small>
-                                    Optional
-                                </small>
-</label>
-<input id="bikeYear" max="2030" min="1950" name="bikeYear" placeholder="e.g. 2022" type="number"/>
-</div>
-</div>
-<div class="form-group">
-<label for="serviceType">
-                            Service Required
-                            <span>*</span>
-</label>
-<select id="serviceType" name="serviceType" required="">
-<option value="">
-                                Select a service
-                            </option>
-<option value="General Service">
-                                General Service
-                            </option>
-<option value="Precision Engine Tuning">
-                                Precision Engine Tuning
-                            </option>
-<option value="Diagnostic Inspection">
-                                Diagnostic Inspection
-                            </option>
-<option value="Rally &amp; Touring Preparation">
-                                Rally &amp; Touring Preparation
-                            </option>
-<option value="Custom Restoration">
-                                Custom Restoration
-                            </option>
-<option value="Long-Ride Check">
-                                Long-Ride Check
-                            </option>
-<option value="Other / Need Advice">
-                                Other / Need Advice
-                            </option>
-</select>
-</div>
-<div class="form-section-label form-section-spacer">
-<span>VISIT PREFERENCE</span>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label for="preferredDate">
-                                Preferred Date
-                                <small>
-                                    Optional
-                                </small>
-</label>
-<input id="preferredDate" name="preferredDate" type="date"/>
-</div>
-<div class="form-group">
-<label for="preferredTime">
-                                Preferred Time
-                                <small>
-                                    Optional
-                                </small>
-</label>
-<select id="preferredTime" name="preferredTime">
-<option value="">
-                                    Select time
-                                </option>
-<option value="Morning">
-                                    Morning
-                                </option>
-<option value="Afternoon">
-                                    Afternoon
-                                </option>
-<option value="Evening">
-                                    Evening
-                                </option>
-</select>
-</div>
-</div>
-<div class="form-group">
-<label for="message">
-                            Tell Us More
-                            <small>
-                                Optional
-                            </small>
-</label>
-<textarea id="message" name="message" placeholder="Describe the issue, service requirement or anything else we should know..." rows="5"></textarea>
-</div>
-<div class="form-consent">
-<input id="contactConsent" required="" type="checkbox"/>
-<label for="contactConsent">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Motorcycle Services | Classic Motors Mananthavady">
+<meta property="og:description" content="Workshop services for Royal Enfield motorcycles in Mananthavady, Wayanad.">
+<meta property="og:url" content="https://ridewithclassicmotors.online/services/">
+<meta property="og:site_name" content="Classic Motors">
 
-                            I agree to be contacted by Classic Motors
-                            regarding this service enquiry.
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Motorcycle Services | Classic Motors">
+<meta name="twitter:description" content="Service, tuning, restoration, diagnostics and long-ride preparation in Mananthavady.">
 
-                        </label>
-</div>
-<button class="form-submit-btn" type="submit">
-<i class="fa-brands fa-whatsapp"></i>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="../style.css">
 
-                        SEND SERVICE REQUEST
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"MotorcycleRepair",
+  "@id":"https://ridewithclassicmotors.online/#classic-motors",
+  "name":"Classic Motors",
+  "url":"https://ridewithclassicmotors.online/",
+  "telephone":"+919447433965",
+  "email":"classicmotorsre@gmail.com",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Near Valliyurkav Temple",
+    "addressLocality":"Mananthavady",
+    "addressRegion":"Kerala",
+    "postalCode":"670645",
+    "addressCountry":"IN"
+  },
+  "areaServed":["Mananthavady","Wayanad","Kerala"],
+  "sameAs":["https://www.instagram.com/classicmotors.re/"]
+}
+</script>
 
-                        <i class="fa-solid fa-arrow-right"></i>
-</button>
-<p class="form-security-note">
-<i class="fa-solid fa-shield-halved"></i>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://ridewithclassicmotors.online/"},
+    {"@type":"ListItem","position":2,"name":"Services","item":"https://ridewithclassicmotors.online/services/"}
+  ]
+}
+</script>
+</head>
 
-                        Your enquiry is used only for responding to your
-                        service request.
+<body class="services-page">
 
-                    </p>
-<div aria-live="polite" class="form-status" id="formStatus" role="status">
-</div>
-</form>
-</div>
-</div>
-</div>
+<header>
+  <div class="logo-container">
+    <a href="../" aria-label="Classic Motors home">
+      <h1>CLASSIC <span>MOTORS</span></h1>
+      <div class="subtitle">Independent Royal Enfield Specialist</div>
+    </a>
+  </div>
+
+  <nav aria-label="Primary Navigation">
+    <ul class="nav-links">
+      <li><a href="../">Home</a></li>
+      <li><a href="../services/" class="active" aria-current="page">Services</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="../riders-den/">Rider's Den</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul>
+  </nav>
+
+  <a class="cta-btn" href="https://wa.me/919447433965" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp"></i>
+    TALK TO US
+  </a>
+
+  <button class="mobile-menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</header>
+
+<main>
+
+<section class="page-header services-hero">
+  <div class="container">
+    <div class="page-header-grid">
+      <div>
+        <span class="badge"><i class="fa-solid fa-screwdriver-wrench"></i> WORKSHOP SERVICES</span>
+        <h2>CARE FOR THE<br><span style="color:var(--red)">MACHINE.</span></h2>
+        <p>
+          Practical motorcycle service built around inspection, experience and
+          attention to detail — from routine maintenance to restoration and
+          long-distance preparation.
+        </p>
+      </div>
+      <div class="page-header-meta">
+        <span>CLASSIC MOTORS</span>
+        <strong>WORK</strong>
+        <small>INSPECT • SERVICE • RIDE</small>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="story-section">
+  <div class="container">
+    <div class="editorial-split">
+      <div class="story-content">
+        <span class="section-kicker">OUR APPROACH</span>
+        <h3>START WITH THE<br><span>BIKE.</span></h3>
+        <p>
+          Every service begins with understanding the motorcycle and the rider's
+          requirement. The aim is not simply to replace parts, but to identify
+          the work the motorcycle actually needs.
+        </p>
+        <p>
+          Classic Motors combines long-standing Royal Enfield experience with
+          modern workshop practices, diagnostics and practical road knowledge.
+        </p>
+      </div>
+      <aside class="story-highlight">
+        <div class="story-highlight-inner">
+          <span class="story-label">INDEPENDENT SPECIALIST</span>
+          <p>
+            Classic Motors is an independent workshop and is not an official
+            Royal Enfield authorised service centre.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="services-content">
+  <div class="container">
+    <div class="section-title">
+      <span class="section-kicker">WORKSHOP CAPABILITIES</span>
+      <h3>BUILT FOR<br><span style="color:var(--red)">RIDERS.</span></h3>
+      <p>Service options can be discussed directly before the motorcycle is booked in.</p>
+    </div>
+
+    <div class="grid-cards">
+      <article class="card service-card">
+        <i class="fa-solid fa-gears"></i>
+        <h4>Precision Engine Tuning</h4>
+        <p>Mechanical inspection, diagnosis and performance-focused engine tuning for a smoother, better-understood motorcycle.</p>
+      </article>
+
+      <article class="card service-card">
+        <i class="fa-solid fa-route"></i>
+        <h4>Rally & Touring Preparation</h4>
+        <p>Practical preparation for long rides, touring and demanding road conditions, informed by real rally experience.</p>
+      </article>
+
+      <article class="card service-card">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <h4>Custom Restoration</h4>
+        <p>Careful restoration work for motorcycles that need their mechanical character and road presence brought back.</p>
+      </article>
+
+      <article class="card service-card">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <h4>General Service</h4>
+        <p>Routine service and maintenance for riders who want their motorcycle inspected, serviced and ready for the road.</p>
+      </article>
+
+      <article class="card service-card">
+        <i class="fa-solid fa-microchip"></i>
+        <h4>Diagnostic Inspection</h4>
+        <p>Focused inspection when a motorcycle develops a fault, unusual behaviour or a problem that needs closer attention.</p>
+      </article>
+
+      <article class="card service-card">
+        <i class="fa-solid fa-gauge-high"></i>
+        <h4>Long-Ride Check</h4>
+        <p>A practical pre-ride inspection for riders preparing for longer journeys through Wayanad and beyond.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="rally-section">
+  <div class="container">
+    <div class="rally-content">
+      <div class="rally-copy">
+        <span class="section-kicker">RALLY EXPERIENCE</span>
+        <h3>KNOWLEDGE<br><span>FROM THE ROAD.</span></h3>
+        <p>
+          Pradeep's rally mechanic experience between 2002 and 2010 included
+          working around foreign riders and demanding motorcycle journeys,
+          including rally environments in Himachal Pradesh, Goa and Gokarna.
+        </p>
+        <p>
+          That practical road perspective remains part of the workshop's
+          approach to touring and long-distance preparation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="container">
+    <div class="section-title">
+      <span class="section-kicker">HOW WE WORK</span>
+      <h3>FOUR SIMPLE<br><span style="color:var(--yellow)">STEPS.</span></h3>
+    </div>
+
+    <div class="grid-cards approach-grid">
+      <article class="card">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <h4>Inspect</h4>
+        <p>Understand the motorcycle, the issue and the rider's requirement.</p>
+      </article>
+      <article class="card">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <h4>Assess</h4>
+        <p>Identify the work required and discuss the practical route forward.</p>
+      </article>
+      <article class="card">
+        <i class="fa-solid fa-wrench"></i>
+        <h4>Work</h4>
+        <p>Carry out the agreed service with attention to the motorcycle's condition.</p>
+      </article>
+      <article class="card">
+        <i class="fa-solid fa-road"></i>
+        <h4>Ready to Ride</h4>
+        <p>Complete the service process and prepare the motorcycle for its next ride.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE REQUEST -->
+<section class="service-request-section editorial-service-request" id="service-request">
+  <div class="container">
+    <div class="service-request-header">
+      <div class="badge"><i class="fa-solid fa-calendar-check"></i> SERVICE ENQUIRY</div>
+      <h3>YOUR BIKE. <span>YOUR REQUEST.</span></h3>
+      <p>Share the essentials and we'll review your enquiry before getting back to you.</p>
+    </div>
+
+    <div class="service-form-wrapper">
+      <div class="service-form-info">
+        <div class="form-info-heading">
+          <div>
+            <h4>START WITH THE BIKE</h4>
+            <p>A focused service enquiry for your motorcycle.</p>
+          </div>
+        </div>
+
+        <div class="form-info-list">
+          <div class="form-info-item">
+            <div class="form-info-icon"><i class="fa-solid fa-motorcycle"></i></div>
+            <div><strong>Tell us your bike</strong><span>Model, year and basic details.</span></div>
+          </div>
+          <div class="form-info-item">
+            <div class="form-info-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <div><strong>Select your service</strong><span>Service, tuning, restoration or touring.</span></div>
+          </div>
+          <div class="form-info-item">
+            <div class="form-info-icon"><i class="fa-regular fa-calendar"></i></div>
+            <div><strong>Preferred date</strong><span>Let us know when you would like to visit.</span></div>
+          </div>
+          <div class="form-info-item">
+            <div class="form-info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div><strong>Quick response</strong><span>Your enquiry can be sent directly to WhatsApp.</span></div>
+          </div>
+        </div>
+
+        <div class="form-direct-contact">
+          <span>Prefer a direct conversation?</span>
+          <a href="tel:+919447433965"><i class="fa-solid fa-phone"></i> +91 94474 33965</a>
+        </div>
+      </div>
+
+      <div class="service-form-card">
+        <form aria-label="Classic Motors service enquiry form" id="serviceRequestForm" novalidate>
+          <div class="form-section-label"><span>RIDER DETAILS</span></div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="customerName">Your Name <span>*</span></label>
+              <input type="text" id="customerName" name="customerName" placeholder="Enter your name" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="customerPhone">Phone / WhatsApp <span>*</span></label>
+              <input type="tel" id="customerPhone" name="customerPhone" placeholder="e.g. 9447433965" autocomplete="tel" inputmode="tel" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="customerEmail">Email Address <small>Optional</small></label>
+            <input type="email" id="customerEmail" name="customerEmail" placeholder="yourname@example.com" autocomplete="email">
+          </div>
+
+          <div class="form-section-label form-section-spacer"><span>MOTORCYCLE DETAILS</span></div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bikeModel">Motorcycle Model <span>*</span></label>
+              <input type="text" id="bikeModel" name="bikeModel" placeholder="e.g. Classic 350" required>
+            </div>
+            <div class="form-group">
+              <label for="bikeYear">Model Year <small>Optional</small></label>
+              <input type="number" id="bikeYear" name="bikeYear" placeholder="e.g. 2022" min="1950" max="2035">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="serviceType">Service Required <span>*</span></label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="">Select a service</option>
+              <option>General Service</option>
+              <option>Precision Engine Tuning</option>
+              <option>Diagnostic Inspection</option>
+              <option>Rally & Touring Preparation</option>
+              <option>Custom Restoration</option>
+              <option>Long-Ride Check</option>
+              <option>Other / Need Advice</option>
+            </select>
+          </div>
+
+          <div class="form-section-label form-section-spacer"><span>VISIT PREFERENCE</span></div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="preferredDate">Preferred Date <small>Optional</small></label>
+              <input type="date" id="preferredDate" name="preferredDate">
+            </div>
+            <div class="form-group">
+              <label for="preferredTime">Preferred Time <small>Optional</small></label>
+              <select id="preferredTime" name="preferredTime">
+                <option value="">Select time</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell Us More <small>Optional</small></label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe the issue, service requirement or anything else we should know..."></textarea>
+          </div>
+
+          <label class="form-consent">
+            <input type="checkbox" id="contactConsent" required>
+            <span>I agree to be contacted by Classic Motors regarding this service enquiry.</span>
+          </label>
+
+          <button type="submit" class="form-submit-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            SEND SERVICE REQUEST
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+          <p class="form-security-note">
+            <i class="fa-solid fa-shield-halved"></i>
+            Your enquiry is used only for responding to your service request.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="container">
+    <div class="section-title">
+      <span class="section-kicker">SERVICE FAQ</span>
+      <h3>BEFORE YOU<br><span style="color:var(--red)">BOOK.</span></h3>
+      <p>Quick answers about Classic Motors workshop services.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="reveal">
+        <summary>Do I need an appointment? <i class="fa-solid fa-plus"></i></summary>
+        <p>It is best to send a service enquiry or contact Classic Motors before visiting so the workshop can discuss your requirement and availability.</p>
+      </details>
+      <details class="reveal">
+        <summary>What motorcycles do you service? <i class="fa-solid fa-plus"></i></summary>
+        <p>Classic Motors is positioned as an independent Royal Enfield specialist workshop. Contact the workshop with your motorcycle details before booking.</p>
+      </details>
+      <details class="reveal">
+        <summary>Can you prepare a motorcycle for a long ride? <i class="fa-solid fa-plus"></i></summary>
+        <p>Yes, long-ride and touring preparation is one of the workshop service categories. Share your planned requirement and preferred visit date.</p>
+      </details>
+      <details class="reveal">
+        <summary>Can I ask for restoration work? <i class="fa-solid fa-plus"></i></summary>
+        <p>Custom restoration is offered as a service category. The motorcycle and the required scope should be discussed directly with Classic Motors.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <span class="section-kicker">CLASSIC MOTORS · MANANTHAVADY</span>
+    <h3>HAVE A BIKE THAT <span>NEEDS ATTENTION?</span></h3>
+    <p>Talk to Classic Motors about service, restoration or long-distance preparation.</p>
+    <div class="hero-btns">
+      <a class="btn primary-btn" href="https://wa.me/919447433965" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i> WHATSAPP CLASSIC MOTORS
+      </a>
+      <a class="btn secondary-btn" href="../contact/">CONTACT PAGE</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">CLASSIC MOTORS</div>
+            <p>
+                Independent Royal Enfield Specialist<br>
+                Mananthavady, Wayanad, Kerala
+            </p>
+        </div>
+
+        <div class="footer-social">
+            <a aria-label="Instagram" href="https://www.instagram.com/classicmotors.re/"
+               target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a aria-label="WhatsApp" href="https://wa.me/919447433965"
+               target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a aria-label="Call Classic Motors" href="tel:+919447433965">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+            <a aria-label="Classic Motors location"
+               href="https://share.google/h3YDCEL6WjPwHLIgK"
+               target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-location-dot"></i>
+            </a>
+            <a aria-label="Email Classic Motors" href="mailto:classicmotorsre@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+
+        <nav aria-label="Footer Navigation" class="footer-nav">
+            <a href="../">Home</a>
+            <a href="../services/">Services</a>
+            <a href="../about/">About</a>
+            <a href="../riders-den/">Rider's Den</a>
+            <a href="../contact/">Contact</a>
+            <a href="../privacy/">Privacy</a>
+        </nav>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Classic Motors. All Rights Reserved.</p>
+            <p>
+                Digital Experience by
+                <a href="https://www.thegypsycartel.com"
+                   target="_blank" rel="noopener noreferrer">
+                    The Gypsy Cartel
+                </a>
+            </p>
+        </div>
+
+        <p class="footer-legal">
+            Royal Enfield is a trademark of Eicher Motors Limited.
+            Classic Motors is an independent motorcycle workshop.
+        </p>
+    </div>
+</footer>
+
+<div class="mobile-action-bar">
+    <a aria-label="Call Classic Motors" href="tel:+919447433965">
+        <i class="fa-solid fa-phone"></i><span>CALL</span>
+    </a>
+    <a aria-label="WhatsApp Classic Motors" href="https://wa.me/919447433965"
+       target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i><span>WHATSAPP</span>
+    </a>
+    <a aria-label="Classic Motors location"
+       href="https://share.google/h3YDCEL6WjPwHLIgK"
+       target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-location-arrow"></i><span>MAP</span>
+    </a>
+</div>
+
+<script defer src="../script.js"></script>
+</body>
+</html>
