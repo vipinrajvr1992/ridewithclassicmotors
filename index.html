@@ -58,11 +58,11 @@
 <!-- =========================================================
          ICONS
     ========================================================== -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
 <!-- =========================================================
          CSS
     ========================================================== -->
-<link href="style.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet">
 <!-- =========================================================
          STRUCTURED DATA — LOCAL BUSINESS / SEO / AEO / GEO
     ========================================================== -->
@@ -138,7 +138,180 @@
         }
     }
     </script>
-</head>
+</link><style id="home-page-premium-fix">
+/* =========================================================
+   CLASSIC MOTORS — HOME PAGE PREMIUM FIX V7
+   - prevents header / hero clipping
+   - restores a controlled hero content boundary
+   - adds interactive icon motion
+   - keeps motion accessible
+========================================================= */
+
+html{
+  scroll-padding-top:96px;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+header{
+  position:sticky !important;
+  top:0;
+  z-index:2000 !important;
+}
+
+main{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero{
+  position:relative;
+  isolation:isolate;
+  min-height:calc(100svh - var(--header));
+  height:auto !important;
+  display:flex;
+  align-items:center;
+  padding:clamp(104px,12vh,150px) clamp(34px,8vw,128px) clamp(76px,9vh,110px) !important;
+  overflow:hidden;
+}
+
+.hero-content{
+  width:min(100%,900px);
+  max-width:900px !important;
+  margin:0 !important;
+  padding-top:0 !important;
+  position:relative;
+  z-index:3;
+}
+
+.hero-content .badge{
+  position:relative;
+  z-index:4;
+  margin-top:0 !important;
+  transform:none;
+}
+
+.hero-content h2{
+  max-width:900px;
+}
+
+.hero-btns .btn,
+.cta-btn,
+.footer-social a,
+.mobile-action-bar a,
+.card,
+.card i{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.card,
+.footer-social a,
+.mobile-action-bar a,
+.btn,
+.cta-btn{
+  transition:
+    transform .3s cubic-bezier(.22,.61,.36,1),
+    border-color .3s ease,
+    background-color .3s ease,
+    color .3s ease,
+    box-shadow .3s ease;
+}
+
+.card i,
+.footer-social a i,
+.mobile-action-bar a i,
+.btn > i,
+.cta-btn > i,
+.contact-section .fa-location-dot{
+  display:inline-block;
+  transform-origin:center;
+  transition:
+    transform .32s cubic-bezier(.22,.61,.36,1),
+    color .28s ease,
+    filter .28s ease;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card:hover i{
+  transform:translateY(-5px) scale(1.14) rotate(-4deg);
+  color:var(--accent-red, #dc2626);
+  filter:drop-shadow(0 5px 10px rgba(220,38,38,.22));
+}
+
+.footer-social a:hover{
+  transform:translateY(-3px);
+  border-color:var(--accent-yellow, #f59e0b);
+}
+
+.footer-social a:hover i{
+  transform:translateY(-2px) scale(1.14) rotate(5deg);
+}
+
+.mobile-action-bar a:hover{
+  transform:translateY(-2px);
+}
+
+.mobile-action-bar a:hover i{
+  transform:scale(1.15) rotate(-4deg);
+}
+
+.btn:hover > i,
+.cta-btn:hover > i{
+  transform:translateX(4px) scale(1.08);
+}
+
+.hero-content .badge i{
+  transition:transform .32s cubic-bezier(.22,.61,.36,1), color .28s ease;
+}
+
+.hero-content .badge:hover i{
+  transform:rotate(-12deg) scale(1.15);
+  color:var(--accent-red, #dc2626);
+}
+
+@media (max-width:1000px){
+  .hero{
+    min-height:calc(100svh - 74px);
+    padding:96px 6vw 76px !important;
+  }
+}
+
+@media (max-width:760px){
+  .hero{
+    min-height:calc(100svh - 68px);
+    padding:92px 20px 72px !important;
+    align-items:center;
+  }
+
+  .hero-content{
+    width:100%;
+  }
+
+  .hero-content h2{
+    max-width:100%;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .card,
+  .footer-social a,
+  .mobile-action-bar a,
+  .btn,
+  .cta-btn,
+  .card i,
+  .footer-social a i,
+  .mobile-action-bar a i,
+  .btn > i,
+  .cta-btn > i{
+    transition:none !important;
+  }
+}
+</style></head>
 <body>
 <!-- =========================================================
      HEADER
@@ -160,7 +333,7 @@
 </ul>
 </nav>
 <a class="cta-btn header-call-btn" href="tel:+919447433965">
-    <i class="fa-solid fa-phone"></i>
+<i class="fa-solid fa-phone"></i>
     CALL WORKSHOP
   </a>
 <button aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-btn" type="button">
@@ -260,37 +433,16 @@
 <section aria-labelledby="story-title" class="story-section">
 <div class="container">
 <div class="section-title">
-<h3 id="story-title">MORE THAN A MECHANIC.</h3>
-<p>
-                A life built around Enfield.
-            </p>
+<h3 id="story-title">MEET BULLET PRADEEP.</h3>
+<p>THE MAN BEHIND CLASSIC MOTORS.</p>
 </div>
 <div class="story-content">
-<h4>THE STORY OF BULLET PRADEEP</h4>
-<p>
-                Pradeep N, popularly known as
-                <strong>"Bullet Pradeep"</strong>, entered the motorcycle
-                mechanic field at the age of 18.
-            </p>
-<p>
-                His journey with Royal Enfield began in 1988, inspired
-                greatly by his elder brother Prasad.
-            </p>
-<p>
-                Over the years, motorcycles became more than a profession.
-                They became a way of life.
-            </p>
-<p>
-                His passion for Enfield runs so deep that the word
-                <strong>"Enfield"</strong> is engraved on his wedding ring —
-                a small personal detail that reflects a lifetime connected
-                with motorcycles.
-            </p>
-<a class="btn secondary-btn" href="/about/">
-
-                Discover His Story
-                <i class="fa-solid fa-arrow-right"></i>
-</a>
+<h4>A PASSION THAT BECAME A LIFE.</h4>
+<p>Pradeep N, popularly known as , was born in 1974. Long before motorcycles became his profession, the machines had already caught his imagination.</p>
+<p>In 1988, when he was 14, he began spending time around his elder brother Prasad’s workshop — learning through observation, listening closely and slowly understanding the craft behind the machine.</p>
+<p>What began as passion and close exposure grew into years of practical knowledge. After Prasad’s passing, Pradeep took on the responsibility of carrying the workshop forward — turning experience into the foundation for what would become Classic Motors.</p>
+<p>From 2002 to 2010, that foundation travelled beyond the workshop. Pradeep worked as a rally mechanic alongside foreign riders and experienced demanding roads and riding environments across Himachal Pradesh, Goa and Gokarna.</p>
+<a class="btn secondary-btn" href="/about/">READ BULLET PRADEEP’S STORY <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
 </section>
@@ -555,79 +707,63 @@
             restoration or long-distance preparation.
 
         </p>
-<a class="btn primary-btn" href="https://wa.me/919447433965?text=Hello%20Classic%20Motors%2C%20I%20would%20like%20to%20enquire%20about%20my%20motorcycle." rel="noopener noreferrer" target="_blank">
-<i class="fa-brands fa-whatsapp"></i>
-            WhatsApp Classic Motors
-
-        </a>
+<a class="btn primary-btn" href="tel:+919447433965" rel target><i aria-hidden="true" class="fa-solid fa-phone"></i> CALL WORKSHOP</a>
 </div>
 </section>
 </main>
 <!-- =========================================================
      FOOTER
 ========================================================== -->
-
 <footer>
-    <div class="footer-inner">
-        <div class="footer-brand">
-            <div class="footer-logo">CLASSIC MOTORS</div>
-            <p>
-                Independent Royal Enfield Specialist<br>
+<div class="footer-inner">
+<div class="footer-brand">
+<div class="footer-logo">CLASSIC MOTORS</div>
+<p>
+                Independent Royal Enfield Specialist<br/>
                 Mananthavady, Wayanad, Kerala
             </p>
-        </div>
-
-        <div class="footer-social">
-            <a aria-label="Instagram" href="https://www.instagram.com/classicmotors.re/"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a aria-label="WhatsApp" href="https://wa.me/919447433965"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a aria-label="Call Classic Motors" href="tel:+919447433965">
-                <i class="fa-solid fa-phone"></i>
-            </a>
-            <a aria-label="Classic Motors location"
-               href="https://share.google/h3YDCEL6WjPwHLIgK"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-location-dot"></i>
-            </a>
-            <a aria-label="Email Classic Motors" href="mailto:classicmotorsre@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </div>
-
-        <nav aria-label="Footer Navigation" class="footer-nav">
-            <a href="">Home</a>
-            <a href="services/">Services</a>
-            <a href="about/">About</a>
-            <a href="riders-den/">Rider's Den</a>
-            <a href="contact/">Contact</a>
-            <a href="privacy/">Privacy</a>
-        </nav>
-
-        <div class="footer-divider"></div>
-
-        <div class="footer-bottom">
-            <p>© 2026 Classic Motors. All Rights Reserved.</p>
-            <p>
+</div>
+<div class="footer-social">
+<a aria-label="Instagram" href="https://www.instagram.com/classicmotors.re/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+<a aria-label="WhatsApp" href="https://wa.me/919447433965" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+<a aria-label="Call Classic Motors" href="tel:+919447433965">
+<i class="fa-solid fa-phone"></i>
+</a>
+<a aria-label="Classic Motors location" href="https://share.google/h3YDCEL6WjPwHLIgK" rel="noopener noreferrer" target="_blank">
+<i class="fa-solid fa-location-dot"></i>
+</a>
+<a aria-label="Email Classic Motors" href="mailto:classicmotorsre@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
+</div>
+<nav aria-label="Footer Navigation" class="footer-nav">
+<a href="">Home</a>
+<a href="services/">Services</a>
+<a href="about/">About</a>
+<a href="riders-den/">Rider's Den</a>
+<a href="contact/">Contact</a>
+<a href="privacy/">Privacy</a>
+</nav>
+<div class="footer-divider"></div>
+<div class="footer-bottom">
+<p>© 2026 Classic Motors. All Rights Reserved.</p>
+<p>
                 Digital Experience by
-                <a href="https://www.thegypsycartel.com"
-                   target="_blank" rel="noopener noreferrer">
+                <a href="https://www.thegypsycartel.com" rel="noopener noreferrer" target="_blank">
                     The Gypsy Cartel
                 </a>
-            </p>
-        </div>
-
-        <p class="footer-legal">
+</p>
+</div>
+<p class="footer-legal">
             Royal Enfield is a trademark of Eicher Motors Limited.
             Classic Motors is an independent motorcycle workshop.
         </p>
-    </div>
+</div>
 </footer>
-
 <!-- =========================================================
      MOBILE QUICK ACTION BAR
 ========================================================== -->
@@ -646,21 +782,6 @@
      JAVASCRIPT
 ========================================================== -->
 
-<div class="mobile-action-bar">
-    <a aria-label="Call Classic Motors" href="tel:+919447433965">
-        <i class="fa-solid fa-phone"></i><span>CALL</span>
-    </a>
-    <a aria-label="WhatsApp Classic Motors" href="https://wa.me/919447433965"
-       target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-whatsapp"></i><span>WHATSAPP</span>
-    </a>
-    <a aria-label="Classic Motors location"
-       href="https://share.google/h3YDCEL6WjPwHLIgK"
-       target="_blank" rel="noopener noreferrer">
-        <i class="fa-solid fa-location-arrow"></i><span>MAP</span>
-    </a>
-</div>
-
-<script defer src="script.js"></script>
+<script defer="" src="script.js"></script>
 </body>
 </html>
