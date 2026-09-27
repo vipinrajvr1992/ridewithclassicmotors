@@ -987,7 +987,7 @@ html{
   margin-left:auto !important;
 }
 
-/* ---------- footer: exact clean About/Home system ---------- */
+/* ---------- FOOTER — MASTER HOME V9 SYSTEM ---------- */
 .services-page footer{
   min-height:300px !important;
 }
@@ -1002,11 +1002,11 @@ html{
   align-items:center !important;
   justify-content:flex-end !important;
   gap:22px !important;
-  margin-top:-43px !important;
-  margin-bottom:38px !important;
+  margin:0 !important;
 }
 
 .services-page .footer-social a{
+  position:relative !important;
   width:auto !important;
   min-width:0 !important;
   height:auto !important;
@@ -1017,19 +1017,24 @@ html{
   margin:0 !important;
   padding:4px !important;
   border:0 !important;
+  border-width:0 !important;
+  border-style:none !important;
   border-radius:0 !important;
   background:transparent !important;
   box-shadow:none !important;
   color:#fff !important;
   text-decoration:none !important;
   cursor:pointer !important;
-  transition:transform .28s ease,color .24s ease,filter .24s ease !important;
+  transition:
+    transform .30s cubic-bezier(.22,.61,.36,1),
+    color .25s ease,
+    filter .25s ease !important;
 }
 
 .services-page .footer-social a i{
+  display:block !important;
   width:auto !important;
   height:auto !important;
-  display:block !important;
   margin:0 !important;
   padding:0 !important;
   border:0 !important;
@@ -1038,8 +1043,22 @@ html{
   color:inherit !important;
   font-size:19px !important;
   line-height:1 !important;
+  transform-origin:center;
   transform:none !important;
-  transition:transform .28s ease,color .24s ease,filter .24s ease !important;
+  transition:
+    transform .30s cubic-bezier(.22,.61,.36,1),
+    color .25s ease,
+    filter .25s ease !important;
+}
+
+.services-page .footer-social a::after{
+  content:"";
+  position:absolute;
+  inset:-5px;
+  border-radius:50%;
+  border:1px solid transparent;
+  pointer-events:none;
+  transition:border-color .25s ease,transform .25s ease;
 }
 
 .services-page .footer-social a:hover,
@@ -1053,59 +1072,55 @@ html{
 
 .services-page .footer-social a:hover i,
 .services-page .footer-social a:focus-visible i{
-  transform:scale(1.18) !important;
+  transform:scale(1.18) rotate(-5deg) !important;
+  filter:drop-shadow(0 5px 10px rgba(0,0,0,.35));
+}
+
+.services-page .footer-social a:hover::after,
+.services-page .footer-social a:focus-visible::after{
+  border-color:rgba(255,255,255,.16);
+  transform:scale(1.08);
 }
 
 .services-page .footer-social a:nth-child(1):hover i,
 .services-page .footer-social a:nth-child(1):focus-visible i{
   color:#e1306c !important;
 }
+
 .services-page .footer-social a:nth-child(2):hover i,
 .services-page .footer-social a:nth-child(2):focus-visible i{
   color:#25d366 !important;
 }
+
 .services-page .footer-social a:nth-child(3):hover i,
 .services-page .footer-social a:nth-child(3):focus-visible i{
   color:#f2b632 !important;
 }
+
 .services-page .footer-social a:nth-child(4):hover i,
 .services-page .footer-social a:nth-child(4):focus-visible i{
   color:#ef4444 !important;
 }
+
 .services-page .footer-social a:nth-child(5):hover i,
 .services-page .footer-social a:nth-child(5):focus-visible i{
   color:#f2b632 !important;
 }
 
 .services-page .footer-social a:active{
-  transform:translateY(-1px) scale(.97) !important;
+  transform:translateY(-1px) scale(.96) !important;
 }
 
 /* ---------- mobile: keep same alignment logic ---------- */
 @media (max-width:760px){
-  .services-page .service-form-info,
-  .services-page .service-form-card{
-    padding:28px 24px !important;
-  }
-
-  .services-page .form-direct-contact a{
-    font-size:27px !important;
-  }
-
-  .services-page .form-consent{
-    grid-template-columns:17px minmax(0,1fr) !important;
-    column-gap:10px !important;
-  }
-
-  .services-page .form-consent > span{
-    font-size:12px !important;
-  }
-
   .services-page .footer-social{
     justify-content:flex-start !important;
     gap:19px !important;
-    margin-top:25px !important;
-    margin-bottom:30px !important;
+    margin:0 !important;
+  }
+
+  .services-page .footer-social a{
+    padding:4px !important;
   }
 
   .services-page .footer-social a i{
@@ -1116,8 +1131,7 @@ html{
 @media (prefers-reduced-motion:reduce){
   .services-page .footer-social a,
   .services-page .footer-social a i,
-  .services-page .form-direct-contact a,
-  .services-page .form-direct-contact a i{
+  .services-page .footer-social a::after{
     transition:none !important;
   }
 }
