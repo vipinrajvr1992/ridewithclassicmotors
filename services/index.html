@@ -1,0 +1,479 @@
+<!-- =====================================================
+     SERVICE REQUEST / BOOKING FORM
+====================================================== -->
+
+<section class="service-request-section"
+         id="service-request"
+         aria-labelledby="service-request-title">
+
+    <div class="container">
+
+        <div class="service-request-header">
+
+            <div class="badge">
+                <i class="fa-solid fa-calendar-check"></i>
+                SERVICE ENQUIRY
+            </div>
+
+            <h3 id="service-request-title">
+                TELL US ABOUT YOUR <span>BIKE.</span>
+            </h3>
+
+            <p>
+                Share a few details about your motorcycle and the service
+                you are looking for. Our team can review your enquiry and
+                get back to you.
+            </p>
+
+        </div>
+
+
+        <div class="service-form-wrapper">
+
+            <!-- LEFT INFORMATION PANEL -->
+
+            <div class="service-form-info">
+
+                <div class="form-info-heading">
+
+                    <span class="form-number">
+                        01
+                    </span>
+
+                    <div>
+                        <h4>
+                            SERVICE REQUEST
+                        </h4>
+
+                        <p>
+                            A simple way to tell us what your motorcycle needs.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-info-list">
+
+                    <div class="form-info-item">
+
+                        <div class="form-info-icon">
+                            <i class="fa-solid fa-motorcycle"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Tell us your bike
+                            </strong>
+
+                            <span>
+                                Model, year and basic details.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-info-item">
+
+                        <div class="form-info-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Select your service
+                            </strong>
+
+                            <span>
+                                Service, tuning, restoration or touring.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-info-item">
+
+                        <div class="form-info-icon">
+                            <i class="fa-regular fa-calendar"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Preferred date
+                            </strong>
+
+                            <span>
+                                Let us know when you would like to visit.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-info-item">
+
+                        <div class="form-info-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Quick response
+                            </strong>
+
+                            <span>
+                                Your enquiry can be sent directly to WhatsApp.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-direct-contact">
+
+                    <span>
+                        Prefer to talk directly?
+                    </span>
+
+                    <a href="tel:+919447433965">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +91 94474 33965
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <div class="service-form-card">
+
+                <form id="serviceRequestForm"
+                      novalidate>
+
+                    <div class="form-section-label">
+
+                        <span>
+                            RIDER DETAILS
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="customerName">
+                                Your Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                name="customerName"
+                                placeholder="Enter your name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+                                Phone / WhatsApp
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                name="customerPhone"
+                                placeholder="e.g. 9447433965"
+                                autocomplete="tel"
+                                inputmode="tel"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customerEmail">
+                            Email Address
+                            <small>
+                                Optional
+                            </small>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="customerEmail"
+                            name="customerEmail"
+                            placeholder="yourname@example.com"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+
+                    <div class="form-section-label form-section-spacer">
+
+                        <span>
+                            MOTORCYCLE DETAILS
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="bikeModel">
+                                Motorcycle Model
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bikeModel"
+                                name="bikeModel"
+                                placeholder="e.g. Classic 350"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="bikeYear">
+                                Model Year
+                                <small>
+                                    Optional
+                                </small>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="bikeYear"
+                                name="bikeYear"
+                                placeholder="e.g. 2022"
+                                min="1950"
+                                max="2030"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="serviceType">
+                            Service Required
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="serviceType"
+                            name="serviceType"
+                            required
+                        >
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option value="General Service">
+                                General Service
+                            </option>
+
+                            <option value="Precision Engine Tuning">
+                                Precision Engine Tuning
+                            </option>
+
+                            <option value="Diagnostic Inspection">
+                                Diagnostic Inspection
+                            </option>
+
+                            <option value="Rally & Touring Preparation">
+                                Rally & Touring Preparation
+                            </option>
+
+                            <option value="Custom Restoration">
+                                Custom Restoration
+                            </option>
+
+                            <option value="Long-Ride Check">
+                                Long-Ride Check
+                            </option>
+
+                            <option value="Other / Need Advice">
+                                Other / Need Advice
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-section-label form-section-spacer">
+
+                        <span>
+                            VISIT PREFERENCE
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="preferredDate">
+                                Preferred Date
+                                <small>
+                                    Optional
+                                </small>
+                            </label>
+
+                            <input
+                                type="date"
+                                id="preferredDate"
+                                name="preferredDate"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="preferredTime">
+                                Preferred Time
+                                <small>
+                                    Optional
+                                </small>
+                            </label>
+
+                            <select
+                                id="preferredTime"
+                                name="preferredTime"
+                            >
+
+                                <option value="">
+                                    Select time
+                                </option>
+
+                                <option value="Morning">
+                                    Morning
+                                </option>
+
+                                <option value="Afternoon">
+                                    Afternoon
+                                </option>
+
+                                <option value="Evening">
+                                    Evening
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Tell Us More
+                            <small>
+                                Optional
+                            </small>
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Describe the issue, service requirement or anything else we should know..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-consent">
+
+                        <input
+                            type="checkbox"
+                            id="contactConsent"
+                            required
+                        >
+
+                        <label for="contactConsent">
+
+                            I agree to be contacted by Classic Motors
+                            regarding this service enquiry.
+
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="form-submit-btn"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        SEND SERVICE REQUEST
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <p class="form-security-note">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        Your enquiry is used only for responding to your
+                        service request.
+
+                    </p>
+
+
+                    <div
+                        id="formStatus"
+                        class="form-status"
+                        role="status"
+                        aria-live="polite">
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
