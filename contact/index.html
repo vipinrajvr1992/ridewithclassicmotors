@@ -863,6 +863,62 @@
 }
 </style>
 
+
+<style id="contact-button-icon-alignment-final-v9">
+/* FINAL V9 — button icon alignment only; no other page changes. */
+.contact-page .contact-card-actions .btn,
+.contact-page .contact-hero .btn,
+.contact-page .location-box .btn{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+  line-height:1 !important;
+  white-space:nowrap;
+}
+
+.contact-page .contact-card-actions .btn > i,
+.contact-page .contact-hero .btn > i,
+.contact-page .location-box .btn > i{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:18px !important;
+  min-width:18px !important;
+  height:18px !important;
+  margin:1px 0 0 !important;
+  padding:0 !important;
+  line-height:1 !important;
+  flex:0 0 18px !important;
+  position:relative;
+  top:1px;
+  vertical-align:middle;
+}
+
+.contact-page .contact-card-actions .primary-btn .fa-whatsapp,
+.contact-page .contact-hero .primary-btn .fa-whatsapp{
+  color:#080808 !important;
+  font-size:18px !important;
+  font-weight:900 !important;
+  -webkit-text-stroke:.28px currentColor;
+  transform:translateY(1px);
+}
+
+.contact-page .contact-card-actions .secondary-btn > i,
+.contact-page .contact-hero .secondary-btn > i,
+.contact-page .location-box .btn > i{
+  transform:translateY(1px);
+}
+
+@media (prefers-reduced-motion:reduce){
+  .contact-page .contact-card-actions .btn > i,
+  .contact-page .contact-hero .btn > i,
+  .contact-page .location-box .btn > i{
+    transition:none !important;
+  }
+}
+</style>
+
 </head>
 <body class="contact-page">
 <header>
