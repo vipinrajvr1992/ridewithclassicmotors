@@ -138,7 +138,7 @@
         }
     }
     </script>
-</link><style id="home-page-premium-fix">
+<style id="home-page-premium-fix">
 /* =========================================================
    CLASSIC MOTORS — HOME PAGE PREMIUM FIX V7
    - prevents header / hero clipping
@@ -431,6 +431,218 @@ main{
   }
 }
 </style>
+
+<style id="home-icon-footer-final-polish">
+/* =========================================================
+   CLASSIC MOTORS HOME — ICON / FOOTER FINAL POLISH
+   No icon boxes. Consistent icon-to-text alignment.
+   Footer icons remain white, clickable and animated.
+========================================================= */
+
+/* HOME CARDS — plain icon treatment */
+main .card{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+main .card > i{
+    width:auto !important;
+    min-width:0 !important;
+    max-width:none !important;
+    height:auto !important;
+    min-height:0 !important;
+    padding:0 !important;
+    margin:0 0 22px !important;
+
+    display:inline-block !important;
+    flex:0 0 auto !important;
+
+    border:0 !important;
+    border-width:0 !important;
+    border-style:none !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    background-color:transparent !important;
+    box-shadow:none !important;
+
+    color:var(--accent-yellow,#f2b632) !important;
+    font-size:29px !important;
+    line-height:1 !important;
+    text-align:left !important;
+    vertical-align:middle !important;
+
+    transform-origin:center;
+    transition:
+        transform .32s cubic-bezier(.22,.61,.36,1),
+        color .25s ease,
+        filter .25s ease !important;
+}
+
+main .card > h4{
+    margin-top:0 !important;
+    margin-bottom:12px !important;
+    align-self:flex-start;
+}
+
+main .card > p{
+    margin-top:0 !important;
+}
+
+/* Card hover: keep the existing premium lift, animate only the icon too. */
+main .card:hover > i{
+    transform:translateY(-3px) scale(1.13) rotate(-4deg) !important;
+    color:var(--accent-red,#dc2626) !important;
+    filter:drop-shadow(0 6px 12px rgba(220,38,38,.22));
+}
+
+/* FOOTER — same structure/alignment as About page, but no icon boxes */
+footer .footer-social{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:22px !important;
+}
+
+footer .footer-social a{
+    width:auto !important;
+    min-width:0 !important;
+    height:auto !important;
+    min-height:0 !important;
+
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    margin:0 !important;
+    padding:4px !important;
+
+    border:0 !important;
+    border-width:0 !important;
+    border-style:none !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+
+    color:#ffffff !important;
+    text-decoration:none !important;
+    cursor:pointer !important;
+
+    transition:
+        transform .30s cubic-bezier(.22,.61,.36,1),
+        color .25s ease,
+        filter .25s ease !important;
+}
+
+footer .footer-social a i{
+    display:block !important;
+    width:auto !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    color:inherit !important;
+    font-size:19px !important;
+    line-height:1 !important;
+
+    transform-origin:center;
+    transition:
+        transform .30s cubic-bezier(.22,.61,.36,1),
+        color .25s ease,
+        filter .25s ease !important;
+}
+
+/* Individual interactive colors */
+footer .footer-social a:nth-child(1):hover,
+footer .footer-social a:nth-child(1):focus-visible{
+    color:#e1306c !important;
+}
+footer .footer-social a:nth-child(2):hover,
+footer .footer-social a:nth-child(2):focus-visible{
+    color:#25d366 !important;
+}
+footer .footer-social a:nth-child(3):hover,
+footer .footer-social a:nth-child(3):focus-visible{
+    color:#f2b632 !important;
+}
+footer .footer-social a:nth-child(4):hover,
+footer .footer-social a:nth-child(4):focus-visible{
+    color:#ef4444 !important;
+}
+footer .footer-social a:nth-child(5):hover,
+footer .footer-social a:nth-child(5):focus-visible{
+    color:#f2b632 !important;
+}
+
+footer .footer-social a:hover,
+footer .footer-social a:focus-visible{
+    transform:translateY(-4px) scale(1.06) !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    outline:none;
+}
+
+footer .footer-social a:hover i,
+footer .footer-social a:focus-visible i{
+    transform:scale(1.18) rotate(-5deg);
+    filter:drop-shadow(0 5px 10px rgba(0,0,0,.35));
+}
+
+footer .footer-social a:active{
+    transform:translateY(-1px) scale(.96) !important;
+}
+
+/* Make the clickable targets obvious without bringing back visible boxes. */
+footer .footer-social a{
+    position:relative;
+}
+footer .footer-social a::after{
+    content:"";
+    position:absolute;
+    inset:-5px;
+    border-radius:50%;
+    border:1px solid transparent;
+    transition:border-color .25s ease, transform .25s ease;
+}
+footer .footer-social a:hover::after,
+footer .footer-social a:focus-visible::after{
+    border-color:rgba(255,255,255,.16);
+    transform:scale(1.08);
+}
+
+/* Mobile footer spacing */
+@media (max-width:760px){
+    main .card > i{
+        font-size:27px !important;
+        margin-bottom:20px !important;
+    }
+
+    footer .footer-social{
+        justify-content:flex-start !important;
+        gap:19px !important;
+    }
+
+    footer .footer-social a{
+        padding:4px !important;
+    }
+
+    footer .footer-social a i{
+        font-size:18px !important;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+    main .card > i,
+    footer .footer-social a,
+    footer .footer-social a i,
+    footer .footer-social a::after{
+        transition:none !important;
+    }
+}
+</style>
+
 </head>
 <body>
 <!-- =========================================================
@@ -558,7 +770,7 @@ main{
 </div>
 <div class="story-content">
 <h4>A PASSION THAT BECAME A LIFE.</h4>
-<p>Pradeep N, popularly known as , was born in 1974. Long before motorcycles became his profession, the machines had already caught his imagination.</p>
+<p>Pradeep N, popularly known as <strong>"Bullet Pradeep"</strong>, was born in 1974. Long before motorcycles became his profession, the machines had already caught his imagination.</p>
 <p>In 1988, when he was 14, he began spending time around his elder brother Prasad’s workshop — learning through observation, listening closely and slowly understanding the craft behind the machine.</p>
 <p>What began as passion and close exposure grew into years of practical knowledge. After Prasad’s passing, Pradeep took on the responsibility of carrying the workshop forward — turning experience into the foundation for what would become Classic Motors.</p>
 <p>From 2002 to 2010, that foundation travelled beyond the workshop. Pradeep worked as a rally mechanic alongside foreign riders and experienced demanding roads and riding environments across Himachal Pradesh, Goa and Gokarna.</p>
@@ -827,7 +1039,7 @@ main{
             restoration or long-distance preparation.
 
         </p>
-<a class="btn primary-btn" href="tel:+919447433965" rel target><i aria-hidden="true" class="fa-solid fa-phone"></i> CALL WORKSHOP</a>
+<a class="btn primary-btn" href="tel:+919447433965"><i aria-hidden="true" class="fa-solid fa-phone"></i> CALL WORKSHOP</a>
 </div>
 </section>
 </main>
@@ -861,7 +1073,7 @@ main{
 </a>
 </div>
 <nav aria-label="Footer Navigation" class="footer-nav">
-<a href="">Home</a>
+<a href="/">Home</a>
 <a href="services/">Services</a>
 <a href="about/">About</a>
 <a href="riders-den/">Rider's Den</a>
