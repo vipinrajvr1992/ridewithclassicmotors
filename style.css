@@ -23,13 +23,13 @@
   --yellow-soft:#efb43c;
   --green:#22c55e;
   --max:1240px;
-  --header:78px;
+  --header:80px;
   --ease:.28s ease;
   --shadow:0 18px 55px rgba(0,0,0,.34);
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:92px}
+html{scroll-behavior:smooth;scroll-padding-top:108px}
 body{
   background:var(--bg-black);
   color:var(--text);
@@ -186,7 +186,7 @@ header nav{margin-left:auto}
   pointer-events:none;
   background:linear-gradient(135deg,rgba(215,25,32,.08),transparent 38%);
 }
-.hero-content{position:relative;z-index:2;max-width:790px}
+.hero-content{position:relative;z-index:2;max-width:790px;padding-top:18px}
 .badge{
   display:inline-flex;
   align-items:center;
@@ -256,7 +256,7 @@ header nav{margin-left:auto}
    PAGE HEADERS
    ========================================================= */
 .page-header{
-  padding:78px 0;
+  padding:104px 0 86px;
   border-bottom:1px solid var(--border);
   background:
     linear-gradient(180deg,#151515,#0d0d0d);
@@ -861,4 +861,194 @@ footer{
   body{background:#fff;color:#000}
   .privacy-block,.privacy-intro{background:#fff;color:#000;border:1px solid #ccc;box-shadow:none}
   .privacy-block p,.privacy-block li{color:#222}
+}
+
+
+/* =========================================================
+   FINAL POLISH — ALIGNMENT / NO DECORATIVE COUNTERS
+   ========================================================= */
+
+[id]{
+  scroll-margin-top:108px;
+}
+
+.page-header,
+.hero{
+  isolation:isolate;
+}
+
+.contact-page .contact-hero,
+.about-page .about-hero,
+.services-page .services-hero,
+.privacy-page .privacy-hero,
+.riders-den-page .page-header{
+  padding-top:104px;
+}
+
+.rider-den-meta strong{
+  font-size:54px;
+  letter-spacing:.5px;
+  color:#fff;
+}
+
+.rider-den-meta small{
+  display:block;
+  color:#666;
+  font-size:9px;
+  letter-spacing:1.1px;
+}
+
+.contact-page .contact-hero-mark .hero-mark-ring{
+  padding:26px;
+}
+
+.contact-page .contact-hero-mark .hero-mark-year{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:30px;
+  font-weight:800;
+  letter-spacing:1px;
+  color:#fff;
+}
+
+.contact-page .contact-hero-mark .hero-mark-label{
+  font-size:9px;
+  letter-spacing:1.6px;
+  color:var(--yellow);
+}
+
+.about-page .editorial-index,
+.about-page .editorial-feature-number,
+.contact-page .editorial-index,
+.contact-page .story-number,
+.contact-page .channel-index,
+.contact-page .form-number,
+.riders-den-page .room-number,
+.riders-den-page .story-number{
+  display:none !important;
+}
+
+.riders-den-page .room-heading{
+  display:flex;
+  align-items:flex-end;
+  gap:0;
+}
+
+.riders-den-page .room-heading > div{
+  width:100%;
+}
+
+.riders-den-page .story-highlight-inner{
+  padding-left:0;
+}
+
+.riders-den-page .rally-content{
+  grid-template-columns:1fr;
+}
+
+.riders-den-page .rally-stats{
+  display:none;
+}
+
+.contact-page .rally-stats{
+  display:none;
+}
+
+.contact-page .contact-intro .story-content{
+  width:100%;
+}
+
+.footer-inner{
+  width:min(100%,var(--max));
+}
+
+footer{
+  min-height:300px;
+}
+
+.footer-brand p{
+  color:#858585;
+}
+
+.footer-social{
+  align-items:center;
+}
+
+.footer-social a{
+  flex:0 0 38px;
+}
+
+.footer-bottom{
+  align-items:center;
+}
+
+.footer-legal{
+  color:#555;
+}
+
+@media (min-width:761px){
+  .hero{
+    padding-top:90px;
+    padding-bottom:90px;
+  }
+
+  .page-header{
+    min-height:420px;
+    display:flex;
+    align-items:center;
+  }
+
+  .contact-page .contact-hero,
+  .about-page .about-hero,
+  .services-page .services-hero,
+  .privacy-page .privacy-hero,
+  .riders-den-page .page-header{
+    min-height:440px;
+  }
+}
+
+@media (max-width:760px){
+  :root{--header:68px}
+
+  .hero{
+    min-height:calc(100svh - var(--header));
+    padding:86px 20px 70px;
+  }
+
+  .page-header,
+  .contact-page .contact-hero,
+  .about-page .about-hero,
+  .services-page .services-hero,
+  .privacy-page .privacy-hero,
+  .riders-den-page .page-header{
+    padding-top:84px;
+    padding-bottom:64px;
+  }
+
+  .footer-social{
+    justify-content:flex-start;
+    margin-top:25px;
+  }
+
+  footer{
+    min-height:auto;
+  }
+}
+
+
+/* Compatibility: old footer markup, if any, uses the same visual language. */
+.social-icons{
+  display:flex;
+  justify-content:flex-end;
+  gap:9px;
+  margin:24px 0 30px;
+}
+.social-icons a{
+  width:38px;
+  height:38px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--border);
+  background:#090909;
+  color:#aaa;
 }
