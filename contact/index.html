@@ -803,6 +803,36 @@
 }
 </style>
 
+
+<style id="contact-card-whatsapp-final-v7">
+/* FINAL V7 — requested visual polish only. */
+.contact-page .primary-btn .fa-whatsapp{
+  color:#080808 !important;
+  width:18px !important;
+  min-width:18px !important;
+  height:18px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  line-height:1 !important;
+  flex:0 0 18px !important;
+}
+
+/* Keep yellow WhatsApp buttons optically balanced without changing other controls. */
+.contact-page .contact-card-actions .primary-btn,
+.contact-page .contact-hero .primary-btn{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:9px !important;
+}
+
+/* Keep phone/detail rows visually aligned after the location-row removal. */
+.contact-page .contact-primary-number,
+.contact-page .contact-card-detail{
+  flex-shrink:0;
+}
+</style>
 </head>
 <body class="contact-page">
 <header>
@@ -903,10 +933,6 @@
 <div class="contact-card-detail">
 <i aria-hidden="true" class="fa-solid fa-calendar-check"></i>
 <span>Room bookings &amp; availability</span>
-</div>
-<div class="rider-location-link">
-<i aria-hidden="true" class="fa-solid fa-location-dot"></i>
-<a href="https://maps.app.goo.gl/7V4cPJFKAEx7hk9eA" target="_blank" rel="noopener noreferrer">Rider's Den location</a>
 </div>
 <div class="hero-btns contact-card-actions">
 <a class="btn primary-btn" href="https://wa.me/919449150965" rel="noopener noreferrer" target="_blank">
