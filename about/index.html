@@ -116,6 +116,264 @@
     }
     </script>
 
+
+<style id="about-page-premium-polish-v7">
+/* =========================================================
+   CLASSIC MOTORS — ABOUT PAGE PREMIUM POLISH V7
+   Scoped only to .about-page so other pages stay untouched.
+   ========================================================= */
+
+.about-page{
+  --about-accent: #f0ab18;
+  --about-red: #e11d26;
+}
+
+/* ---------- clean card icons: no square boxes ---------- */
+.about-page .card > i,
+.about-page .about-rally-card-v6 > i{
+  width:auto !important;
+  min-width:0 !important;
+  height:auto !important;
+  min-height:0 !important;
+  padding:0 !important;
+  margin:0 0 22px !important;
+  display:inline-block !important;
+  border:0 !important;
+  outline:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  line-height:1 !important;
+  font-size:28px !important;
+  color:var(--about-accent) !important;
+  transform-origin:center;
+  transition:
+    transform .32s cubic-bezier(.22,.61,.36,1),
+    color .26s ease,
+    filter .26s ease;
+}
+
+.about-page .card,
+.about-page .about-rally-card-v6{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.about-page .card > h4,
+.about-page .about-rally-card-v6 > h4{
+  margin-top:0 !important;
+}
+
+.about-page .card > p,
+.about-page .about-rally-card-v6 > p{
+  margin-top:0 !important;
+}
+
+/* icon motion */
+.about-page .card:hover > i,
+.about-page .card:focus-within > i,
+.about-page .about-rally-card-v6:hover > i{
+  transform:translateY(-4px) scale(1.14) rotate(-5deg);
+  color:var(--about-red) !important;
+  filter:drop-shadow(0 6px 12px rgba(225,29,38,.22));
+}
+
+/* Keep the dedicated ring icon visually intentional, but remove any
+   accidental square-box treatment from the actual icon itself. */
+.about-page .about-ring-icon-v6 i,
+.about-page .about-ring-icon-v6 > i{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  width:auto !important;
+  height:auto !important;
+}
+
+/* ---------- buttons: consistent icon motion ---------- */
+.about-page .btn,
+.about-page .cta-btn{
+  transition:
+    transform .3s cubic-bezier(.22,.61,.36,1),
+    box-shadow .3s ease,
+    background-color .3s ease,
+    color .3s ease,
+    border-color .3s ease;
+}
+
+.about-page .btn > i,
+.about-page .cta-btn > i{
+  display:inline-block;
+  transform-origin:center;
+  transition:
+    transform .3s cubic-bezier(.22,.61,.36,1),
+    color .24s ease,
+    filter .24s ease;
+}
+
+.about-page .btn:hover > i,
+.about-page .cta-btn:hover > i{
+  transform:translateX(4px) scale(1.08);
+}
+
+.about-page .btn:active,
+.about-page .cta-btn:active{
+  transform:translateY(1px) scale(.985);
+}
+
+/* ---------- footer: same clean system as Home V9 ---------- */
+.about-page .footer-social{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:20px;
+}
+
+.about-page .footer-social a{
+  width:auto !important;
+  min-width:0 !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 !important;
+  padding:5px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border:0 !important;
+  border-width:0 !important;
+  border-style:none !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  color:rgba(255,255,255,.9) !important;
+  text-decoration:none !important;
+  cursor:pointer !important;
+  transition:
+    transform .28s cubic-bezier(.22,.61,.36,1),
+    color .24s ease,
+    filter .24s ease !important;
+}
+
+.about-page .footer-social a i{
+  margin:0 !important;
+  padding:0 !important;
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  border:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  font-size:18px !important;
+  line-height:1 !important;
+  transform-origin:center;
+  transition:
+    transform .28s cubic-bezier(.22,.61,.36,1),
+    color .24s ease,
+    filter .24s ease !important;
+}
+
+.about-page .footer-social a:hover,
+.about-page .footer-social a:focus-visible{
+  transform:translateY(-4px) scale(1.06) !important;
+  border:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  outline:none;
+}
+
+.about-page .footer-social a:hover i,
+.about-page .footer-social a:focus-visible i{
+  transform:scale(1.18) rotate(-5deg);
+  filter:drop-shadow(0 5px 10px rgba(0,0,0,.35));
+}
+
+.about-page .footer-social a:nth-child(1):hover i,
+.about-page .footer-social a:nth-child(1):focus-visible i{
+  color:#e1306c !important;
+}
+
+.about-page .footer-social a:nth-child(2):hover i,
+.about-page .footer-social a:nth-child(2):focus-visible i{
+  color:#25d366 !important;
+}
+
+.about-page .footer-social a:nth-child(3):hover i,
+.about-page .footer-social a:nth-child(3):focus-visible i{
+  color:#f2b632 !important;
+}
+
+.about-page .footer-social a:nth-child(4):hover i,
+.about-page .footer-social a:nth-child(4):focus-visible i{
+  color:#ef4444 !important;
+}
+
+.about-page .footer-social a:nth-child(5):hover i,
+.about-page .footer-social a:nth-child(5):focus-visible i{
+  color:#f2b632 !important;
+}
+
+.about-page .footer-social a:active{
+  transform:translateY(-1px) scale(.96) !important;
+}
+
+/* ---------- no accidental icon box on location / quote icons ---------- */
+.about-page .location-icon,
+.about-page .about-prasad-quote-v6 > i{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+.about-page .location-icon{
+  display:inline-block;
+  transform-origin:center;
+  transition:transform .28s ease, color .24s ease;
+}
+
+.about-page .location-box:hover .location-icon{
+  transform:translateY(-3px) scale(1.1);
+  color:var(--about-red) !important;
+}
+
+/* ---------- mobile footer alignment ---------- */
+@media (max-width:760px){
+  .about-page .footer-social{
+    justify-content:flex-start;
+    gap:18px;
+  }
+
+  .about-page .footer-social a{
+    padding:4px !important;
+  }
+
+  .about-page .footer-social a i{
+    font-size:17px !important;
+  }
+
+  .about-page .card > i,
+  .about-page .about-rally-card-v6 > i{
+    font-size:26px !important;
+    margin-bottom:18px !important;
+  }
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  .about-page .card > i,
+  .about-page .about-rally-card-v6 > i,
+  .about-page .footer-social a,
+  .about-page .footer-social a i,
+  .about-page .btn,
+  .about-page .cta-btn,
+  .about-page .btn > i,
+  .about-page .cta-btn > i,
+  .about-page .location-icon{
+    transition:none !important;
+  }
+}
+</style>
+
 </head>
 
 <body class="about-page">
@@ -132,7 +390,7 @@
         <ul class="nav-links">
             <li><a href="../">Home</a></li>
             <li><a href="../services/">Services</a></li>
-            <li><a href="../about/" class="active" aria-current="page">About</a></li>
+            <li><a href="../about/" class="active" aria-current="page">Our Story</a></li>
             <li><a href="../riders-den/">Rider's Den</a></li>
             <li><a href="../contact/">Contact</a></li>
         </ul>
