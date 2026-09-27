@@ -311,7 +311,127 @@ main{
     transition:none !important;
   }
 }
-</style></head>
+</style>
+<!-- =========================================================
+     FOOTER SOCIAL ICON POLISH — NO BOX / CLICKABLE / ANIMATED
+     Scoped to footer social icons only.
+========================================================= -->
+<style id="footer-social-icon-polish">
+.footer-social{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:20px;
+}
+
+.footer-social a{
+  width:auto !important;
+  min-width:0 !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 !important;
+  padding:5px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  border:0 !important;
+  border-width:0 !important;
+  border-style:none !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+
+  color:rgba(255,255,255,.84) !important;
+  text-decoration:none !important;
+  cursor:pointer !important;
+
+  transition:
+    transform .28s cubic-bezier(.22,.61,.36,1),
+    color .24s ease,
+    filter .24s ease !important;
+}
+
+.footer-social a i{
+  margin:0 !important;
+  padding:0 !important;
+  font-size:18px;
+  line-height:1;
+  display:block;
+  transform-origin:center;
+  transition:
+    transform .28s cubic-bezier(.22,.61,.36,1),
+    color .24s ease,
+    filter .24s ease !important;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible{
+  transform:translateY(-4px) scale(1.06) !important;
+  border:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  outline:none;
+}
+
+.footer-social a:hover i,
+.footer-social a:focus-visible i{
+  transform:scale(1.18) rotate(-5deg);
+  filter:drop-shadow(0 5px 10px rgba(0,0,0,.35));
+}
+
+.footer-social a:nth-child(1):hover i,
+.footer-social a:nth-child(1):focus-visible i{
+  color:#e1306c !important;
+}
+
+.footer-social a:nth-child(2):hover i,
+.footer-social a:nth-child(2):focus-visible i{
+  color:#25d366 !important;
+}
+
+.footer-social a:nth-child(3):hover i,
+.footer-social a:nth-child(3):focus-visible i{
+  color:#f2b632 !important;
+}
+
+.footer-social a:nth-child(4):hover i,
+.footer-social a:nth-child(4):focus-visible i{
+  color:#ef4444 !important;
+}
+
+.footer-social a:nth-child(5):hover i,
+.footer-social a:nth-child(5):focus-visible i{
+  color:#f2b632 !important;
+}
+
+.footer-social a:active{
+  transform:translateY(-1px) scale(.96) !important;
+}
+
+@media (max-width:760px){
+  .footer-social{
+    justify-content:flex-start;
+    gap:18px;
+  }
+
+  .footer-social a{
+    padding:4px !important;
+  }
+
+  .footer-social a i{
+    font-size:17px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .footer-social a,
+  .footer-social a i{
+    transition:none !important;
+  }
+}
+</style>
+</head>
 <body>
 <!-- =========================================================
      HEADER
