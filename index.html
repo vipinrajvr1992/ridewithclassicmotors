@@ -47,8 +47,11 @@
 <!-- =========================================================
          FAVICON
     ========================================================== -->
-<link href="images/favicon.png" rel="icon" type="image/png"/>
-<link href="images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="assets/frontpage/favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/frontpage/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16"/>
+<link href="assets/frontpage/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32"/>
+<link href="assets/frontpage/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="assets/frontpage/site.webmanifest" rel="manifest"/>
 <!-- =========================================================
          PERFORMANCE
     ========================================================== -->
@@ -675,14 +678,59 @@ footer .footer-social a:focus-visible::after{
 
 </head>
 <body>
+<style id="home-logo-favicon-final">
+/* =========================================================
+   CLASSIC MOTORS — HEADER BRAND MARK / FAVICON
+   Small brand emblem beside the existing wordmark.
+   Existing navigation and header layout otherwise unchanged.
+========================================================= */
+header .logo-container .brand-lockup{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  white-space:nowrap;
+  text-decoration:none !important;
+}
+header .logo-container .brand-mark{
+  width:36px;
+  height:36px;
+  flex:0 0 36px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+header .logo-container .brand-mark img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+}
+header .logo-container .brand-copy{
+  min-width:0;
+  display:block;
+}
+header .logo-container .brand-copy h1{
+  margin:0 !important;
+}
+header .logo-container .brand-copy .subtitle{
+  margin-top:3px !important;
+}
+@media (max-width:760px){
+  header .logo-container .brand-lockup{gap:8px !important;}
+  header .logo-container .brand-mark{width:30px;height:30px;flex-basis:30px;}
+}
+</style>
 <!-- =========================================================
      HEADER
 ========================================================== -->
 <header>
 <div class="logo-container">
-<a aria-label="Classic Motors Home" href="/" style="text-decoration:none;">
+<a aria-label="Classic Motors Home" class="brand-lockup" href="/" style="text-decoration:none;">
+<span class="brand-mark" aria-hidden="true"><img src="assets/frontpage/android-chrome-192x192.png" alt="" decoding="async"/></span>
+<span class="brand-copy">
 <h1>CLASSIC <span>MOTORS</span></h1>
 <div class="subtitle">Independent Royal Enfield Specialist</div>
+</span>
 </a>
 </div>
 <nav aria-label="Primary Navigation">
