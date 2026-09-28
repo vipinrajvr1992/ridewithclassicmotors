@@ -643,6 +643,36 @@ footer .footer-social a:focus-visible::after{
 }
 </style>
 
+
+<style id="home-hero-bike-final">
+/* HOME HERO — transparent bike artwork only; no other page changes */
+.hero{position:relative;overflow:hidden;}
+.hero-content{position:relative;z-index:3;}
+.hero-bike{
+  position:absolute;
+  z-index:1;
+  right:1.8vw;
+  bottom:-2px;
+  width:min(52vw,800px);
+  height:auto;
+  max-height:78%;
+  object-fit:contain;
+  object-position:center bottom;
+  pointer-events:none;
+  user-select:none;
+}
+@media (max-width:1000px){
+  .hero-bike{
+    width:min(55vw,640px);
+    right:-1vw;
+    max-height:68%;
+  }
+}
+@media (max-width:760px){
+  .hero-bike{display:none;}
+}
+</style>
+
 </head>
 <body>
 <!-- =========================================================
@@ -705,6 +735,7 @@ footer .footer-social a:focus-visible::after{
                 Independent workshop • Not an official Royal Enfield authorized service centre
             </p>
 </div>
+<img class="hero-bike" src="assets/frontpage/hero.png" alt="" aria-hidden="true" loading="eager" decoding="async">
 </section>
 <!-- =========================================================
      EXPERIENCE HIGHLIGHTS
