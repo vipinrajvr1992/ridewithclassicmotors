@@ -687,17 +687,19 @@ footer .footer-social a:focus-visible::after{
 header .logo-container .brand-lockup{
   display:inline-flex !important;
   align-items:center !important;
-  gap:10px !important;
+  gap:9px !important;
   white-space:nowrap;
   text-decoration:none !important;
 }
 header .logo-container .brand-mark{
-  width:36px;
-  height:36px;
-  flex:0 0 36px;
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  position:relative;
+  top:1px;
 }
 header .logo-container .brand-mark img{
   width:100%;
@@ -711,13 +713,19 @@ header .logo-container .brand-copy{
 }
 header .logo-container .brand-copy h1{
   margin:0 !important;
+  line-height:1 !important;
 }
 header .logo-container .brand-copy .subtitle{
-  margin-top:3px !important;
+  margin-top:4px !important;
 }
 @media (max-width:760px){
-  header .logo-container .brand-lockup{gap:8px !important;}
-  header .logo-container .brand-mark{width:30px;height:30px;flex-basis:30px;}
+  header .logo-container .brand-lockup{gap:7px !important;}
+  header .logo-container .brand-mark{
+    width:32px;
+    height:32px;
+    flex-basis:32px;
+    top:0;
+  }
 }
 </style>
 <!-- =========================================================
