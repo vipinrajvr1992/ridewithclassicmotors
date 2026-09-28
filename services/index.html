@@ -24,6 +24,15 @@
 <meta name="twitter:title" content="Motorcycle Services | Classic Motors">
 <meta name="twitter:description" content="Service, tuning, restoration, diagnostics and long-ride preparation in Mananthavady.">
 
+<!-- =========================================================
+     FAVICON
+========================================================== -->
+<link rel="icon" href="../assets/frontpage/favicon.ico" sizes="any">
+<link rel="icon" href="../assets/frontpage/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="../assets/frontpage/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/frontpage/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="../assets/frontpage/site.webmanifest">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -1137,25 +1146,114 @@ html{
 }
 </style>
 
+<style id="services-home-header-brand">
+/* =========================================================
+   CLASSIC MOTORS — SAME HEADER BRAND LOCKUP AS HOME
+   Nested-page asset paths only.
+========================================================= */
+header .logo-container .brand-lockup{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:9px !important;
+  white-space:nowrap;
+  text-decoration:none !important;
+}
+header .logo-container .brand-mark{
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  top:1px;
+}
+header .logo-container .brand-mark img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+}
+header .logo-container .brand-copy{
+  min-width:0;
+  display:block;
+}
+header .logo-container .brand-copy h1{
+  margin:0 !important;
+  line-height:1 !important;
+}
+header .logo-container .brand-copy .subtitle{
+  margin-top:4px !important;
+}
+@media (max-width:760px){
+  header .logo-container .brand-lockup{gap:7px !important;}
+  header .logo-container .brand-mark{
+    width:32px;
+    height:32px;
+    flex-basis:32px;
+    top:0;
+  }
+}
+</style>
+
+<style id="services-hero-photo">
+/* =========================================================
+   SERVICES HERO — WORKSHOP PHOTO
+   Replaces the small informational meta panel only.
+========================================================= */
+.services-page .services-hero .page-header-grid > .page-header-photo{
+  min-height:350px;
+  height:min(100%,420px);
+  border:1px solid var(--services-border);
+  overflow:hidden;
+  background:#0d0d0d;
+  display:block;
+}
+.services-page .services-hero .page-header-photo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
+@media (max-width:1100px){
+  .services-page .services-hero .page-header-photo{
+    width:min(100%,620px);
+    height:360px;
+  }
+}
+@media (max-width:700px){
+  .services-page .services-hero .page-header-photo{
+    min-height:240px;
+    height:260px;
+  }
+}
+</style>
+
 </head>
 
 <body class="services-page">
 
 <header>
   <div class="logo-container">
-    <a href="../" aria-label="Classic Motors home">
-      <h1>CLASSIC <span>MOTORS</span></h1>
-      <div class="subtitle">Independent Royal Enfield Specialist</div>
+    <a aria-label="Classic Motors Home" class="brand-lockup" href="/" style="text-decoration:none;">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="../assets/frontpage/android-chrome-192x192.png" alt="" decoding="async">
+      </span>
+      <span class="brand-copy">
+        <h1>CLASSIC <span>MOTORS</span></h1>
+        <div class="subtitle">Independent Royal Enfield Specialist</div>
+      </span>
     </a>
   </div>
 
   <nav aria-label="Primary Navigation">
     <ul class="nav-links">
-      <li><a href="../">Home</a></li>
-      <li><a href="../services/" class="active" aria-current="page">Services</a></li>
-      <li><a href="../about/">Our Story</a></li>
-      <li><a href="../riders-den/">Rider's Den</a></li>
-      <li><a href="../contact/">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/services/" class="active" aria-current="page">Services</a></li>
+      <li><a href="/about/">Our Story</a></li>
+      <li><a href="/riders-den/">Rider's Den</a></li>
+      <li><a href="/contact/">Contact</a></li>
     </ul>
   </nav>
 
@@ -1183,10 +1281,12 @@ html{
           long-distance preparation.
         </p>
       </div>
-      <div class="page-header-meta">
-        <span>CLASSIC MOTORS</span>
-        <strong>WORK</strong>
-        <small>INSPECT • SERVICE • RIDE</small>
+      <div class="page-header-photo">
+        <img
+          src="../assets/service/service-1.png"
+          alt="Classic Motors workshop service area with motorcycles on service lifts"
+          loading="eager"
+          decoding="async">
       </div>
     </div>
   </div>
